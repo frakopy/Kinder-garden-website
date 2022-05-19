@@ -17,6 +17,26 @@ acordionBtns.forEach(btn => {
     })
 })
 
+//Form validation 
+const form = document.getElementById('form-contact')
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const inputs = Array.from(form.querySelectorAll('.data-input')) 
+    const valInput1 = inputs[0].value
+    const valInput2 = inputs[1].value
+    const valInput3 = inputs[2].value
+    const valInput4 = inputs[3].value
+    const valInput5 = inputs[4].value
+
+    if (valInput1 === '' || valInput2 === '' || valInput3 === '' || valInput4 === '' || valInput5 === ''){
+        alert('Debe completar todos los campos del formulario')
+    }else{
+        form.submit()
+    }
+
+})
+
 
 //Animation slider 1
 gsap.to(".img-sldr1", {x: '0%', stagger: 5,  ease: "slow(0.7, 0.7, false)", repeat: -1, duration: 2})
@@ -24,3 +44,4 @@ gsap.to(".img-sldr1", {x: '0%', stagger: 5,  ease: "slow(0.7, 0.7, false)", repe
 //Scroll Reveal animation
 
 ScrollReveal().reveal('.imgs-col1', { delay: 300 })
+ScrollReveal().reveal('.vid-col1', { delay: 300 })

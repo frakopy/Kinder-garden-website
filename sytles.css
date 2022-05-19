@@ -589,9 +589,9 @@ header .icons, header .text-header, header .burger-menu:hover{
 
 }
 
-.col-imgs img {
-    width: 90%;
-    height: 40%;
+.col-imgs img, .col-imgs video {
+    width: 20em;
+    height: 20em;
     object-fit: cover;
     margin-bottom: 30px;
     border-radius: 30px;
@@ -645,7 +645,7 @@ form button{
     text-align: center;
     background-color: #DDDDDD;
     border-radius: 5px;
-    border: 2px solid black;
+    border: 1.5px solid #2C2E43;
 }
 
 .how-to-contact{
