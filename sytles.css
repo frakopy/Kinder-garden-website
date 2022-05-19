@@ -6,8 +6,8 @@
     box-sizing: border-box;
     font-family: 'Roboto Flex', sans-serif;
     letter-spacing: 1px;
-
 }
+
 
 /* Header */
 
@@ -27,6 +27,9 @@ header .icons i{
     font-size: 1rem;
 }
 
+.text-header span{
+    margin-right: 10px;
+}
 
 header .icons, header .text-header, header .burger-menu:hover{
     cursor: pointer;
@@ -97,6 +100,9 @@ header .icons, header .text-header, header .burger-menu:hover{
     height: 5vh;
     text-align: center;
     margin-top: 25px;
+    /* position: fixed;
+    top:0px;
+    z-index:10; */
 }
 
 .schedule-date a{
@@ -605,6 +611,7 @@ header .icons, header .text-header, header .burger-menu:hover{
     display: flex;
     justify-content:center;
     margin-top: 50px;
+    margin-bottom: 80px;
 }
 
 .contact form{
@@ -662,4 +669,84 @@ form button{
     width: 90%;
     display: flex;
     flex-direction: column;
+}
+
+/* Footer */
+
+.footer-container{
+    width: 100%;
+    height: 6em;
+    background-image: url(/svg-footer/wave.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+footer {
+    width: 100%;
+    min-height:40vh;
+    background-color: #EA9ABB;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+
+
+.logo-footer-cont{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.logo-footer{
+    width: 10em;
+    height: 8em;
+}
+
+.logo-footer-cont p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 80%;
+    font-size: 1em;
+    color: white;
+}
+
+.menu-footer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-footer a{
+    text-decoration: none;
+    margin-top: 20px;
+    color: white;
+}
+
+
+.copyright{
+    display: flex;
+    justify-content:center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 13px;
+    font-size: bold;
+    color: black;
+}
+
+.copyright i{
+    margin-right: 3px;
+}
+
+.social{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    font-size: 3em;
+    color: white;
 }
