@@ -9,13 +9,15 @@
    <link rel="stylesheet" href="sytles.css">
 </head>
    <body>
+      <!-- Header  -->
       <header id="header">
-         <div class="burger-menu">
-            <i class="fa-solid fa-bars"></i>
+         <div id="burger-menu" class="burger-menu">
+            <i id="icon-bars" class="fa-solid fa-bars"></i>
          </div>
          <div class="icons">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-facebook"></i>
+            <i class="instagram fa-brands fa-instagram"></i>
+            <i class="facebook fa-brands fa-facebook"></i>
+            <i class="twitter fa-brands fa-twitter"></i>
          </div>
          <div class="text-header">
             <span>PAGOS EN LINEA</span>
@@ -23,10 +25,36 @@
          </div>
       </header>
       
+      <!--Burger Menu  -->
+      <div class="burger-container">
+         <div class="burger-menu-container">
+            <div class="icon-x">
+               <i id="icon-x" class="fa-solid fa-xmark"></i>
+            </div>
+            <div id="img-brg-menu" class="img-brg-menu"></div>
+            <div class="menu">
+               <ul>
+                  <li>Inicio</li>
+                  <li>Nosotros</li>
+                  <li>Adminisiones</li>
+                  <li>Contactanos</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+      <!-- Whatsapp Btn -->
+      <div class="wsp">
+         <a href="https://web.whatsapp.com/send?phone=50764318512" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+         </a>
+      </div>
+
+      <!-- Content -->
       <div class="main-container">
          <div class="second-container">
             <img class="banner" src="imgs/banner.png" alt="logo">
-            <img class="logo" src="imgs/logo.png" alt="logo">
+            <div class="logo-container"></div>
             <div class="proj-desc">
                <p>
                   <strong>EnCanto, Jardin Musical</strong> es una propuesta innovadora para dar solución actual
@@ -41,10 +69,10 @@
                </a>
             </div>
             <div class="sec-protocol">
-               <img class="pdf" src="/imgs/pdf.png" alt="pdf-img">
-               <img class="logo" src="imgs/logo.png" alt="logo">
-               <a href="#">
-                  <i class="fa-solid fa-book-medical"></i>
+               <img class="manual pdf" src="/imgs/pdf.png" alt="pdf-img">
+               <img class="manual logo" src="imgs/logo.png" alt="logo">
+               <a id="pdf-link" class="manual" target='_blank' href="#">
+                  <i class="manual fa-solid fa-book-medical"></i>
                   Conoce nuestro protocolo de Bioseguridad
                </a>
             </div>

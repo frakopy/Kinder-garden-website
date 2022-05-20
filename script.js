@@ -1,5 +1,42 @@
-const acordionBtns = Array.from(document.getElementsByClassName('accordion')) 
 
+//Animation Burger Menu 
+
+const burgerIcon = document.getElementById('icon-bars')
+const xIcon = document.getElementById('icon-x')
+const imgBrgMenu = document.getElementById('img-brg-menu')
+
+burgerIcon.addEventListener('click', () => {
+    gsap.to('.burger-container', {x: 0, duration: 1, ease: Power2.easeOut})
+})
+
+xIcon.addEventListener('click', () => {
+    gsap.to('.burger-container', {x: '-100%', duration: 1, ease: Power2.easeOut})
+})
+
+imgBrgMenu.addEventListener('click', () => {
+    gsap.to('.burger-container', {x: '-100%', duration: 1, ease: Power2.easeOut})
+})
+
+//Reading a PDF document 
+const divPdf = document.getElementsByClassName('sec-protocol')[0]
+const pdfLink = document.getElementById('pdf-link')
+
+
+fetch('/manual/manual.pdf') .then(result => result.blob()) .then(pdf => {
+pdfLink.href= URL.createObjectURL(pdf)
+})
+
+divPdf.addEventListener('click', (e) => {
+    const element = e.target
+    if(element.classList.contains('manual')){
+        pdfLink.click()
+    }
+})
+
+
+
+//Acordion animation
+const acordionBtns = Array.from(document.getElementsByClassName('accordion')) 
 
 acordionBtns.forEach(btn => {
     btn.addEventListener('click', () =>{
