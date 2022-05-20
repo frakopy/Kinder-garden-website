@@ -52,7 +52,6 @@ header .icons, header .text-header, header .burger-menu:hover{
     z-index: 20;
     top:0;
     transform: translateX(-100%)
-    /* left: -90%; */
 }
 
 .burger-menu-container{
@@ -861,3 +860,6 @@ footer {
     font-size: 3em;
     color: white;
 }
+
+/* Responsive Design by means media queries */
+

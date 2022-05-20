@@ -1,3 +1,19 @@
+//Links to social media 
+
+const icons = document.querySelectorAll('.social-net')
+
+icons.forEach((icon) => {
+    icon.addEventListener('click', (e) => {
+        if(icon.classList.contains('instagram')){
+            window.open('https://www.instagram.com/','_blank')
+        }else if(icon.classList.contains('facebook')){
+            window.open('https://www.facebook.com/','_blank')
+        }else if(icon.classList.contains('twitter')){
+            window.open('https://twitter.com/','_blank')
+        }
+    })
+})
+
 
 //Animation Burger Menu 
 
