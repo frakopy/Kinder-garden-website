@@ -76,13 +76,12 @@
                   Conoce nuestro protocolo de Bioseguridad
                </a>
             </div>
-            <div class="susuki-prhase">
-               <img src="/imgs/frase-susuki.png" alt="frase-img">
-            </div>
-
+            <div class="susuki-prhase"></div>
             <div class="reasons">
-               <h1>¿Buscando el mejor Jardín para tu hijo?</h3>
-               <h2>Conoce por que somos uno de los mejores jardines infantiles de Tuluá</h2>
+               <div class="title-reasons">
+                  <h1>¿Buscando el mejor Jardín para tu hijo?</h3>
+                  <h2>Conoce por que somos uno de los mejores jardines infantiles de Tuluá</h2>
+               </div>
                <div class="reason-desc">
                   <div class="reason1">
                      <div class="building">
@@ -283,28 +282,44 @@
                   <input class="data-input" type="text" name="Teléfono" placeholder="Teléfono">
                   <input class="data-input" type="text" name="Nombre del estudiante" placeholder="Nombre del estudiante">
                   <div class="how-to-contact">
-                     <label name="label-contact">¿Como desea ser contacatdo?</label>
+                     <label class="label-contact" name="label-contact">¿Como desea ser contacatdo?</label>
                      <div class="options-container">
-                        <label class="option-contact">
+                        <ul>
+                           <li>
+                              <input type="radio" name="contatarme via" value="Llamada Teléfonica">
+                              <span>Llamada Teléfonica</span>
+                           </li>
+                           <li>
+                              <input type="radio" name="contatarme via" value="Correo">
+                              <span>Correo</span>
+                           </li>
+                           <li>
+                              <input type="radio" name="contatarme via" value="Whatsapp">
+                              <span>Whatsapp</span>
+                           </li>
+                        </ul>
+
+                        <!-- <label class="option-contact">
                            <input type="radio" name="contatarme via" value="Llamada Teléfonica">
                            <span>Llamada Teléfonica</span>
-                        </label>
-                        <label class="option-contact">
+                        </label> -->
+                        <!-- <label class="option-contact">
                            <input type="radio" name="contatarme via" value="Correo">
                            <span>Correo</span>
-                        </label>
-                        <label class="option-contact">
+                        </label> -->
+                        <!-- <label class="option-contact">
                            <input type="radio" name="contatarme via" value="Whatsapp">
                            <span>Whatsapp</span>
-                        </label>
+                        </label> -->
+
                      </div>
                   </div>
                   <button >Enviar</button>
                </form>
 
             </div>
-            <div class="footer-container">
-            </div>
+            <!-- <div class="footer-container">
+            </div> -->
             <footer>
                <div class="logo-footer-cont">
                   <img class="logo-footer" src="imgs/logo.png" alt="logo">
@@ -319,15 +334,18 @@
                   <a href="#">Admisiones</a>
                   <a href="#contact">Contactanos</a>
                </div>
-               <div class="copyright">
-                  <i class="fa-solid fa-copyright"></i>
-                  <span>Jardín Musical Encanto Todos los derechos reservados</span>
-               </div>
+
                <div class="social">
                   <i class="social-net instagram fa-brands fa-instagram"></i>
                   <i class="social-net facebook fa-brands fa-facebook"></i>
                   <i class="social-net twitter fa-brands fa-twitter"></i>
                </div>
+
+               <div class="copyright">
+                  <i class="fa-solid fa-copyright"></i>
+                  <span>Jardín Musical Encanto Todos los derechos reservados</span>
+               </div>
+
             </footer>
          </div>
       </div>

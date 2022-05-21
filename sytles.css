@@ -15,33 +15,58 @@ header{
     width: 100%;
     padding: 10px;
     background-color: #4E9F3D;
-    color: white;
-    font-size: 90%;
-    font-weight: bold;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+
 header .icons i{
-    font-size: 1rem;
+    font-size: 0.8em;
+    margin-right: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.text-header{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
 }
 
 .text-header span{
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 2px;
+    font-size: 0.6em;
+    color: white;
+    font-weight: bold;
 }
 
 header .icons, header .text-header, header .burger-menu:hover{
     cursor: pointer;
 }
 
-.burger-menu > i{
-    font-size: 15px;
-    margin-right: 10px;
+/* Burger Menu */
+
+.burger-menu{
+    width: 10%;
 }
 
-/* Burger Menu */
+.burger-menu > i{
+    font-size: 1em;
+    margin-right: 10px;
+    font-weight: bold;
+    color: white;
+}
+
 .burger-container{
     width: 90%;
     min-height: 100vh;
@@ -63,6 +88,7 @@ header .icons, header .text-header, header .burger-menu:hover{
 .icon-x {
     width: 100%;
     font-size: 2.5em;
+    padding-right:15px;
     display: flex;
     justify-content: flex-end;
 }
@@ -173,11 +199,12 @@ a:link, a:visited, a:active{
 }
 
 .second-container .logo-container {
-    width: 50%;
-    height: 25%;
+    width: 80%;
+    height: 30%;
     background-image: url(/imgs/logo.png);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: center center;
 }
 
 
@@ -223,7 +250,7 @@ a:link, a:visited, a:active{
     align-items:center;
     color: white;
     font-weight: bold;
-    font-size: 1em;
+    font-size: calc(0.8em + 1vw)
 }
 
 .schedule-date a i{
@@ -238,7 +265,7 @@ a:link, a:visited, a:active{
     align-items:center;
     flex-wrap: wrap;
     width: 95%;
-    height: 30vh;
+    height: 35vh;
     text-align: center;
     margin-top: 25px;
     position: relative;
@@ -258,7 +285,8 @@ a:link, a:visited, a:active{
     flex-wrap: wrap;
     color: white;
     font-weight: bold;
-    font-size: 1em;
+    font-size: calc(0.8em + 1vw);
+    padding:10px;
 }
 
 .sec-protocol a i{
@@ -285,38 +313,44 @@ a:link, a:visited, a:active{
 .susuki-prhase{
     width: 100%;
     height: 60vh;
-    display: flex;
-    justify-content:center;
+    background-image: url(/imgs/frase-susuki.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
-.susuki-prhase > img{
-    margin-top: 50px;
-    width: 90vw;
-    height: 50vh;
-}
 
 /* reasons title */
 
 .reasons{
     width: 100%;
-    height: 135vh;
+    height: 215vh;
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
+    overflow:auto;
 }
 
-.reasons h1{
+.title-reasons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-reasons h1{
     width: 80%;
+    font-size: calc(1.6em + 1vw);
     text-align: center;
-    margin-top: 15px;
     color: #b4d802;
+    margin-bottom: 70px;
 }
 
-.reasons h2{
+.title-reasons h2{
     width: 80%;
     text-align: center;
-    margin-top: 15px;
-    font-size: 1em;
+    font-size: calc(1em + 1vw);
     color: #7a7a7a;
 }
 
@@ -324,7 +358,7 @@ a:link, a:visited, a:active{
 
 .reason-desc{
     width: 100%;
-    height:100vh;
+    min-height:100vh;
     display: flex;
     justify-content: center;
     margin-top: 25px;
@@ -344,8 +378,11 @@ a:link, a:visited, a:active{
     margin-top: 10px;
     width: 100%;
     display: flex;
-    justify-content:center;
+    justify-content:center; 
     color: #0099cc;
+    text-align: center;
+    font-size: calc(1em + 1vw);
+
 }
 
 .reason1-paragrh{
@@ -359,6 +396,7 @@ a:link, a:visited, a:active{
     width: 80%;
     text-align: left;
     color: #7a7a7a;
+    font-size: calc(0.7em + 1vw);
 }
 
 .building i{
@@ -386,6 +424,8 @@ a:link, a:visited, a:active{
     display: flex;
     justify-content:center;
     color: #b4d802;
+    font-size: calc(1em + 1vw);
+
 }
 
 .reason2-paragrh{
@@ -397,8 +437,9 @@ a:link, a:visited, a:active{
 
 .reason2-paragrh p{
     width: 80%;
-    text-align: center;
+    text-align: left;
     color: #7a7a7a;
+    font-size: calc(0.7em + 1vw);
 }
 
 .graduation-icon i{
@@ -426,6 +467,7 @@ a:link, a:visited, a:active{
     display: flex;
     justify-content:center;
     color: #fe6500;
+    font-size: calc(1em + 1vw);
 }
 
 .reason3-paragrh{
@@ -437,8 +479,10 @@ a:link, a:visited, a:active{
 
 .reason3-paragrh p{
     width: 80%;
-    text-align: center;
+    text-align: left;
     color: #7a7a7a;
+    font-size: calc(0.7em + 1vw);
+
 }
 
 .health-icon i{
@@ -452,7 +496,6 @@ a:link, a:visited, a:active{
 }
 
 /* Age and jurney */
-
 
 .age-jurney{
     width: 100%;
@@ -706,8 +749,10 @@ a:link, a:visited, a:active{
 }
 
 .col-imgs img, .col-imgs video {
-    width: 20em;
-    height: 20em;
+    max-width: 30em;
+    max-height: 30em;
+    width: 70%;
+    height: 70%;
     object-fit: cover;
     margin-bottom: 30px;
     border-radius: 30px;
@@ -736,7 +781,7 @@ a:link, a:visited, a:active{
     margin-bottom: 15px;
     color: #041562;
     font-weight: bold;
-    
+    font-size: calc(0.5em + 1vw)
 }
 
 form button{
@@ -745,15 +790,16 @@ form button{
     border-radius: 5px;
     background-color: #14279B;
     color: white;
-    font-size: 1.2em;
+    font-size: calc(0.8em + 1vw);
     font-weight: bold;
     letter-spacing: 2px;
 }
 
 .contact form .data-label{
-    font-size: 4em;
+    font-size: calc(3em + 4vw);
     font-weight: bold;
     color: #F58840;
+    text-align: center;
 }
 
 .data-input{
@@ -779,17 +825,32 @@ form button{
     width: 90%;
     display: flex;
     flex-direction: column;
+    align-items:center;
+}
+
+.options-container ul{
+    list-style: none;
+}
+
+.options-container ul li span, .how-to-contact .label-contact{
+    font-size: calc(0.5em + 1vw);
+    font-weight: bold;
+    color: #041562;
+} 
+
+input[type='radio'] { 
+    transform: scale(1.3); 
 }
 
 /* Footer */
 
-.footer-container{
+/* .footer-container{
     width: 100%;
     height: 6em;
     background-image: url(/svg-footer/wave.svg);
     background-size: cover;
     background-repeat: no-repeat;
-}
+} */
 
 footer {
     width: 100%;
@@ -801,13 +862,13 @@ footer {
 }
 
 
-
 .logo-footer-cont{
     width: 100%;
     display: flex;
     justify-content:center;
     align-items:center;
     flex-direction: column;
+    margin-top: 50px;
 }
 
 .logo-footer{
@@ -839,27 +900,36 @@ footer {
 .copyright{
     display: flex;
     justify-content:center;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     width: 100%;
-    font-size: 13px;
-    font-size: bold;
+    font-size: 0.7em;
+    font-weight: bold;
     color: black;
 }
 
 .copyright i{
     margin-right: 3px;
+    font-size: 1.5em;
+}
+
+.copyright span{
+    width: 60%;
 }
 
 .social{
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    margin-bottom: 80px;
-    font-size: 3em;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 2.5em;
     color: white;
+}
+
+.social i{
+    margin-right: 50px;
 }
 
 /* Responsive Design by means media queries */
 
+@media screen and (max-width: 768px) {}
