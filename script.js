@@ -188,6 +188,25 @@ function anim_text ( entries, observer ) {
 	})
 }
 
+
+//Animating Pharagraph
+const paReason3 = document.getElementsByClassName('reason3-paragrh')[0].querySelector('p')
+const observer4 = new IntersectionObserver(anim_paragraph, {threshold: 0.1})
+
+observer4.observe(paReason3)
+
+function anim_paragraph ( entries, observer ) {
+	entries.forEach(( entry ) => {
+		if (entry.isIntersecting) {
+            setTimeout(() => {
+                gsap.to('.pa-reasons', {x:'0%',stagger: 0.5 ,duration:1, ease: "slow(0.7, 0.7, false)"})
+            }, 500)
+			observer.unobserve(paReason3) //stop to observe the element strong in order to execute the callback only once
+		}
+	})
+}
+
+
 //Scroll Reveal animation
 
 ScrollReveal().reveal('.imgs-col1', { delay: 300 })

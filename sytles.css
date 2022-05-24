@@ -438,6 +438,7 @@ a:link, a:visited, a:active{
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .reason1-subtitle{
@@ -463,6 +464,7 @@ a:link, a:visited, a:active{
     text-align: left;
     color: #7a7a7a;
     font-size: calc(0.7em + 1vw);
+    transform: translateX(-100%);
 }
 
 .building i{
@@ -482,6 +484,7 @@ a:link, a:visited, a:active{
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .reason2-subtitle{
@@ -506,6 +509,7 @@ a:link, a:visited, a:active{
     text-align: left;
     color: #7a7a7a;
     font-size: calc(0.7em + 1vw);
+    transform: translateX(-100%);
 }
 
 .graduation-icon i{
@@ -525,6 +529,7 @@ a:link, a:visited, a:active{
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .reason3-subtitle{
@@ -548,6 +553,7 @@ a:link, a:visited, a:active{
     text-align: left;
     color: #7a7a7a;
     font-size: calc(0.7em + 1vw);
+    transform: translateX(-100%);
 
 }
 
