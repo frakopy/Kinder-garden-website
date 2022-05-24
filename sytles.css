@@ -26,6 +26,12 @@ header .icons i{
     margin-right: 5px;
     font-weight: bold;
     color: white;
+    transition: all 0.3s;
+}
+
+.icons i:hover{
+    color: #01005E;
+    transform:scale(1.5);
 }
 
 .text-header{
@@ -41,18 +47,75 @@ header .icons i{
     width: 30%;
 }
 
-.text-header span{
+.text-header a{
     margin-right: 10px;
     margin-left: 10px;
     padding: 2px;
     font-size: 0.6em;
     color: white;
     font-weight: bold;
+    transition: all 0.3s;
+}
+
+.text-header a:hover{
+    color: #01005E;
 }
 
 header .icons, header .text-header, header .burger-menu:hover{
     cursor: pointer;
 }
+
+/* Big Menu only for big screens */
+
+.big-menu{
+    width: 100%;
+    margin-top:40px;
+    margin-bottom:40px;
+    display: flex;
+    justify-content:center;
+    display: none;
+}
+
+.big-menu ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.big-menu ul li a{
+    font-size: calc(1.5em + 1vw);
+    font-weight: bold;
+    color: #230338;
+    opacity: 0;
+}
+
+.big-menu ul li {
+    position: relative;
+    display: inline-block;
+    transform: scale(0);
+
+}
+
+.big-menu ul li:after {
+    content: "";
+    position: absolute;
+    left:0;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background-color: #A91079;
+    transition: width .5s ease-in-out;
+}
+
+.big-menu ul li:hover:after {
+    width: 100%;
+}
+
+.big-menu ul li a:hover {
+    color: #A91079;
+}
+
 
 /* Burger Menu */
 
@@ -82,7 +145,7 @@ header .icons, header .text-header, header .burger-menu:hover{
 .burger-menu-container{
     width: 100%;
     height: 100vh;
-    background-color: #F3F1F5;
+    background-color: white;
 }
 
 .icon-x {
@@ -110,12 +173,15 @@ header .icons, header .text-header, header .burger-menu:hover{
     list-style: none;
 }
 
-.menu ul li {
-    margin-top: 20px;
+.menu ul li a {
     margin-left: 40px;
     font-size: 1.7em;
     font-weight: 600;
     color: #4D4C7D;
+}
+
+.menu ul li{
+    margin-top: 20px;
 }
 
 /* Whatsapp Button */
@@ -195,7 +261,7 @@ a:link, a:visited, a:active{
 
 .second-container .banner {
     width: 100%;
-    max-height: 200px;
+    min-height: 10%;
 }
 
 .second-container .logo-container {
@@ -215,12 +281,15 @@ a:link, a:visited, a:active{
     justify-content:center;
     align-items:center;
     margin-top: 15px;
+    opacity: 0;
+    transform: translateY(80%)
 }
 
 .proj-desc > p{
     width: 80%;
     text-align: left;
-    font-size: 100%;
+    margin-bottom: 60px;
+    font-size: calc(0.8em + 1vw);
     color: #711A75;
 }
 
@@ -311,6 +380,7 @@ a:link, a:visited, a:active{
 /* susuki phrase */
 
 .susuki-prhase{
+    margin-top: 60px;
     width: 100%;
     height: 60vh;
     background-image: url(/imgs/frase-susuki.png);
@@ -400,7 +470,7 @@ a:link, a:visited, a:active{
 }
 
 .building i{
-    margin-top: 10px;
+    margin-top: 30px;
     font-size: 4em;
     color: #0099cc;
     background-color: white;
@@ -500,6 +570,7 @@ a:link, a:visited, a:active{
 .age-jurney{
     width: 100%;
     margin-top: 80px;
+    margin-bottom: 80px;
     display: flex;
     justify-content: center;
     padding:20px;
@@ -553,6 +624,7 @@ a:link, a:visited, a:active{
     display: flex;
     justify-content:center;
     color: #0099cc;
+    font-size: calc(1em + 1vw);
 }
 
 .age-desc{
@@ -566,6 +638,8 @@ a:link, a:visited, a:active{
     width: 80%;
     text-align: center;
     color: #7a7a7a;
+    font-size: calc(0.8em + 1vw);
+
 }
 
     /* Jurney */
@@ -592,6 +666,8 @@ a:link, a:visited, a:active{
     display: flex;
     justify-content:center;
     color: #b4d802;
+    font-size: calc(1em + 1vw);
+
 }
 
 .jurney-desc{
@@ -606,6 +682,7 @@ a:link, a:visited, a:active{
     width: 80%;
     text-align: center;
     color: #7a7a7a;
+    font-size: calc(0.8em + 1vw);
 }
 
 /* container slider1 */
@@ -618,9 +695,10 @@ a:link, a:visited, a:active{
 
 .div-slider1{
     width: 80%;
-    min-height: 40vh;
+    min-height: 80vh;
     display: flex;
     justify-content:center;
+    align-items:center;
     background-color: #F1EEE9;
     border: 2px solid #F1EEE9;
     position: relative;
@@ -630,7 +708,6 @@ a:link, a:visited, a:active{
 }
 
 .div-slider1 img{
-    margin-top: 10px;
     width: 90%;
     height: 90%;
     object-fit: cover;
@@ -654,7 +731,7 @@ a:link, a:visited, a:active{
     width: 80%;
     text-align: left;
     color: #333C83;
-    font-size: 2em;
+    font-size: calc(2em + 1vw);
 }
 
 .activities ul{
@@ -663,7 +740,7 @@ a:link, a:visited, a:active{
     align-items: center;
     flex-direction: column;
     margin-top: 30px;
-    width: 100%;
+    width: 90%;
     list-style-type: none;
 }
 
@@ -677,9 +754,9 @@ a:link, a:visited, a:active{
 }
 
 .activities ul li {
-    display: flex;
     width: 90%;
     margin-bottom: 20px;
+    font-size: calc(0.5em + 1vw);
 }
 
 /* Acordion menu */
@@ -692,16 +769,12 @@ a:link, a:visited, a:active{
 }
 
 .accordion{
-    width: 80%;
     height: 40px;
     transition: 0.4s;
     border: none;
     outline: none;
     font-size: 1em;
     font-weight: bold;
-}
-
-.accordion-menu button{
     margin-bottom: 10px;
     display:flex;
     align-items:center;
@@ -711,6 +784,7 @@ a:link, a:visited, a:active{
     background-color: #F8EDED;
     cursor: pointer;
 }
+
 
 .accordion-menu .active-btn{
     background-color: #FD5D5D;
@@ -788,17 +862,18 @@ form button{
     width: 80%;
     height: 3em;
     border-radius: 5px;
-    background-color: #14279B;
+    background-color: #11468F;
     color: white;
     font-size: calc(0.8em + 1vw);
     font-weight: bold;
     letter-spacing: 2px;
+    cursor: pointer;
 }
 
 .contact form .data-label{
     font-size: calc(3em + 4vw);
     font-weight: bold;
-    color: #F58840;
+    color: #3E497A;
     text-align: center;
 }
 
@@ -809,6 +884,11 @@ form button{
     background-color: #DDDDDD;
     border-radius: 5px;
     border: 1.5px solid #2C2E43;
+}
+
+.data-input:focus{
+    background-color: #2D4059;
+    color: white;
 }
 
 .how-to-contact{
@@ -844,14 +924,6 @@ input[type='radio'] {
 
 /* Footer */
 
-/* .footer-container{
-    width: 100%;
-    height: 6em;
-    background-image: url(/svg-footer/wave.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
-
 footer {
     width: 100%;
     min-height:40vh;
@@ -872,8 +944,8 @@ footer {
 }
 
 .logo-footer{
-    width: 10em;
-    height: 8em;
+    width: calc(10em + 5vw);
+    height: auto;
 }
 
 .logo-footer-cont p{
@@ -881,7 +953,7 @@ footer {
     margin-bottom: 15px;
     width: 80%;
     font-size: 1em;
-    color: white;
+    color: #16003B;
 }
 
 .menu-footer{
@@ -893,28 +965,31 @@ footer {
 .menu-footer a{
     text-decoration: none;
     margin-top: 20px;
-    color: white;
+    color: #16003B;
+    font-size: calc(1em + 1vw);
+    font-weight: bold;
+    width: 15%;
 }
 
+.menu-footer a:hover{
+    color:white;
+}
 
 .copyright{
     display: flex;
     justify-content:center;
     margin-bottom: 80px;
-    width: 100%;
-    font-size: 0.7em;
+    width: 90%;
+    font-size: calc(0.5em + 1vw);
     font-weight: bold;
-    color: black;
+    color: #16003B;
 }
 
 .copyright i{
     margin-right: 3px;
-    font-size: 1.5em;
+    font-size: calc(0.5em + 1vw);
 }
 
-.copyright span{
-    width: 60%;
-}
 
 .social{
     width: 100%;
@@ -928,8 +1003,127 @@ footer {
 
 .social i{
     margin-right: 50px;
+    cursor: pointer;
 }
 
-/* Responsive Design by means media queries */
+.social i:hover{
+    color: #5432D3;
+}
 
-@media screen and (max-width: 768px) {}
+/*------------------------- Responsive Design by means media queries ---------------------------------------*/
+
+@media screen and (min-width: 801px) {
+    
+    /*------------- Header ---------------------------*/
+    header .icons i{font-size: calc(0.5em + 1vw);}
+    .text-header{justify-content: center;}
+    .text-header a{font-size:calc(0.5em + 1vw);}
+    .burger-menu{display: none;}
+
+    /*--------- Project-desc ------------------------*/
+    .proj-desc > p{
+        width: 50%;
+    }
+
+    /*----------- Schedule date ----------------------*/
+    .schedule-date{
+        width: 30%;
+        height: 35vh;
+        margin-right: 10px;
+    }
+
+    .schedule-date a{
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+    }
+
+    /*----------- sec-protocol -----------------------*/
+
+    .sec-protocol{
+        width: 30%;
+        margin-left: 10px;
+        border-radius: 20px;
+    }
+
+    .sec-protocol a {
+        font-size: calc(0.5em + 1vw);
+        width: 85%;
+    }
+
+    /*--------------- Reasons -------------------------------*/
+    .reasons{
+        height: 180vh;
+        align-items: center;
+    }
+
+    .reason1, .reason2, .reason3{width: 30%;}
+
+    .reason1-paragrh, .reason2-paragrh, .reason3-paragrh{
+        height: 60%;
+        align-items:flex-start;
+    }
+
+    .reason1-subtitle, .reason2-subtitle, .reason3-subtitle{
+        display: flex;
+        align-items: flex-start;
+        height: 13%;
+    }
+
+    /*--------------- age-jurney -------------------------------*/
+    .age-jurney{margin-top:0px;}
+
+    /*--------------- container-slider1 -------------------------------*/
+    .div-slider1{width: 60%;}
+
+    /*--------------- acordion -------------------------------*/ 
+    .accordion{
+        height: calc(2em + 1vh);
+        font-size: calc(0.6em + 1vw);
+        width: 82%;
+    }
+
+    .accordion i{
+        margin-left: 30px;
+    }
+    
+    .accordion-menu{
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    /*--------------- col-imgs -------------------------------*/ 
+
+    .col-imgs{
+        margin-top: 90px;
+        width: 85%;
+        justify-content:center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: 1 1 1;    
+    }
+    
+    .col-imgs img, .col-imgs video {
+        max-width: 20em;
+        max-height: 20em;
+        margin-right: 30px;
+    }
+
+    /*--------------- contact us -------------------------------*/ 
+    .contact form{width: 60%;}    
+    .data-input{height: 2.5em;}
+    form button{height: 2.5em;}
+
+
+    /*--------------- footer -------------------------------*/ 
+
+    .logo-footer{
+        width: calc(10em + 5vw);
+        height: auto;
+    }
+
+    .logo-footer-cont p{font-size: calc(1em + 1vw);}
+
+    .big-menu{display:block;}
+
+}

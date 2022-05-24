@@ -21,17 +21,27 @@ const burgerIcon = document.getElementById('icon-bars')
 const xIcon = document.getElementById('icon-x')
 const imgBrgMenu = document.getElementById('img-brg-menu')
 
+const links = document.querySelectorAll('.menu ul li a')
+
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        gsap.to('.burger-container', {x: '-100%', duration: 1, ease: Power2.easeOut}) //Animation for hide menu
+    })
+})
+
 burgerIcon.addEventListener('click', () => {
-    gsap.to('.burger-container', {x: 0, duration: 1, ease: Power2.easeOut})
+    gsap.to('.burger-container', {x: 0, duration: 1, ease: Power2.easeOut}) //Animation for open menu
 })
 
 xIcon.addEventListener('click', () => {
-    gsap.to('.burger-container', {x: '-100%', duration: 1, ease: Power2.easeOut})
+    gsap.to('.burger-container', {x: '-100%', duration: 1, ease: Power2.easeOut}) //Animation for hide menu
 })
 
 imgBrgMenu.addEventListener('click', () => {
-    gsap.to('.burger-container', {x: '-100%', duration: 1, ease: Power2.easeOut})
+    gsap.to('.burger-container', {x: '-100%', duration: 1, ease: Power2.easeOut}) //Animation for hide menu
 })
+
+
 
 //Reading a PDF document 
 const divPdf = document.getElementsByClassName('sec-protocol')[0]
@@ -70,11 +80,16 @@ acordionBtns.forEach(btn => {
     })
 })
 
-//Form validation 
+//Form validation and prevent redirection page of formsubmit.co
 const form = document.getElementById('form-contact')
+const url = 'https://formsubmit.co/frako789@gmail.com'
 
 form.addEventListener('submit', (e) => {
+
     e.preventDefault()
+    
+    const formToSend = new FormData(form)
+
     const inputs = Array.from(form.querySelectorAll('.data-input')) 
     const valInput1 = inputs[0].value
     const valInput2 = inputs[1].value
@@ -85,7 +100,10 @@ form.addEventListener('submit', (e) => {
     if (valInput1 === '' || valInput2 === '' || valInput3 === '' || valInput4 === '' || valInput5 === ''){
         alert('Debe completar todos los campos del formulario')
     }else{
-        form.submit()
+        fetch(url, {method:'POST', body:formToSend})
+        // form.submit()
+        form.reset()
+        return false
     }
 
 })
@@ -93,6 +111,40 @@ form.addEventListener('submit', (e) => {
 
 //Animation slider 1
 gsap.to(".img-sldr1", {x: '0%', stagger: 5,  ease: "slow(0.7, 0.7, false)", repeat: -1, duration: 2})
+
+//Animation big menu
+gsap.to(".bg-menu", {opacity: 1, stagger: 0.5, ease: "slow(0.7, 0.7, false)", duration: 1.5})
+gsap.to(".bg-li", { stagger: 0.5, scale: 1, ease: "slow(0.7, 0.7, false)", duration: 1})
+
+//Animation paragraph project description
+const divScheduleDate = document.getElementById('schedule-date')
+
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+}
+
+const observer = new IntersectionObserver(animate_p, options)
+observer.observe(divScheduleDate)
+
+function animate_p ( entries, observer ) {
+	entries.forEach(( entry ) => {
+		if (entry.isIntersecting) {
+            console.log(`This element was intercepted ${entry}`)
+			gsap.to(".proj-desc", {y:'0%', opacity: 1, ease: "slow(0.7, 0.7, false)", duration: 2})
+			observer.unobserve(divScheduleDate) //stop to observe the element strong in order to execute the callback only once
+		}
+	})
+}
+
+
+//Animatin logo using particular JS
+
+
+
+
+
 
 //Scroll Reveal animation
 
