@@ -83,6 +83,17 @@ acordionBtns.forEach(btn => {
 //Form validation and prevent redirection page of formsubmit.co
 const form = document.getElementById('form-contact')
 const url = 'https://formsubmit.co/frako789@gmail.com'
+const modalWind = document.getElementById('modal-container')
+const closeIcon = document.getElementById('close-modal')
+
+closeIcon.addEventListener('click', () => {
+    gsap.to(".modal-container", {opacity: 0, ease: "slow(0.7, 0.7, false)", duration:1})
+    
+    setTimeout(() => {
+        modalWind.classList.add('hide-modal') //For Allow to run the above gsap animation
+    },2000)
+})
+
 
 form.addEventListener('submit', (e) => {
 
@@ -101,8 +112,9 @@ form.addEventListener('submit', (e) => {
         alert('Debe completar todos los campos del formulario')
     }else{
         fetch(url, {method:'POST', body:formToSend})
-        // form.submit()
         form.reset()
+        modalWind.classList.remove('hide-modal')
+        gsap.to(".modal-container", {opacity: 1, ease: "slow(0.7, 0.7, false)", duration:1})
         return false
     }
 
@@ -131,7 +143,7 @@ observer.observe(divScheduleDate)
 function animate_p ( entries, observer ) {
 	entries.forEach(( entry ) => {
 		if (entry.isIntersecting) {
-            console.log(`This element was intercepted ${entry}`)
+            // console.log(`This element was intercepted ${entry}`)
 			gsap.to(".proj-desc", {y:'0%', opacity: 1, ease: "slow(0.7, 0.7, false)", duration: 2})
 			observer.unobserve(divScheduleDate) //stop to observe the element strong in order to execute the callback only once
 		}
@@ -139,12 +151,42 @@ function animate_p ( entries, observer ) {
 }
 
 
-//Animatin logo using particular JS
+//Animating image susuki phrase
+const susukiPhrase = document.getElementById('susuki-ph')
+
+const observer2 = new IntersectionObserver(anim_susuki, {threshold: 1})
+
+observer2.observe(susukiPhrase)
+
+function anim_susuki ( entries, observer ) {
+	entries.forEach(( entry ) => {
+		if (entry.isIntersecting) {
+            // console.log(`This element was intercepted ${entry}`)
+            setTimeout(() => {
+                gsap.to(susukiPhrase, {scale: 1, ease: "slow(0.7, 0.7, false)", duration: 2})
+            }, 500)
+			observer.unobserve(susukiPhrase) //stop to observe the element strong in order to execute the callback only once
+		}
+	})
+}
 
 
+//Animation title reasons 
+const h2 = document.getElementById('text-reasons').querySelector('h2')
+const observer3 = new IntersectionObserver(anim_text, {threshold: 1})
 
+observer3.observe(h2)
 
-
+function anim_text ( entries, observer ) {
+	entries.forEach(( entry ) => {
+		if (entry.isIntersecting) {
+            setTimeout(() => {
+                gsap.to(h2, {y:'150%', duration:1.5, ease: Bounce.easeOut, opacity: 1})
+            }, 800)
+			observer.unobserve(h2) //stop to observe the element strong in order to execute the callback only once
+		}
+	})
+}
 
 //Scroll Reveal animation
 
