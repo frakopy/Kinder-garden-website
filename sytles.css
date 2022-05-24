@@ -29,10 +29,6 @@ header .icons i{
     transition: all 0.3s;
 }
 
-.icons i:hover{
-    color: #01005E;
-    transform:scale(1.5);
-}
 
 .text-header{
     width: 60%;
@@ -57,9 +53,6 @@ header .icons i{
     transition: all 0.3s;
 }
 
-.text-header a:hover{
-    color: #01005E;
-}
 
 header .icons, header .text-header, header .burger-menu:hover{
     cursor: pointer;
@@ -841,6 +834,7 @@ a:link, a:visited, a:active{
     justify-content:center;
     margin-top: 50px;
     margin-bottom: 80px;
+    position: relative;
 }
 
 .contact form{
@@ -920,6 +914,48 @@ form button{
 
 input[type='radio'] { 
     transform: scale(1.3); 
+}
+
+/* Modal Window */
+
+.modal-container{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color: rgba(0,0,0,0.8);
+    width:100vw;
+    height:100%;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    /* display: none; */
+    
+}
+.modal{
+    max-width: 80%;
+    height: 40%;
+    background-color:white;
+    padding: 20px;
+    font-size: calc(1em + 1vw);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    border-radius: 40px;
+    font-weight: bold;
+    color: #064663;
+}
+
+.modal i{
+    margin-top: 40px;
+    font-size: calc(1.7em + 1vw);
+    cursor: pointer;
+    color: red;
+}
+
+.hide{
+    display: none;
 }
 
 /* Footer */
@@ -1019,6 +1055,16 @@ footer {
     .text-header{justify-content: center;}
     .text-header a{font-size:calc(0.5em + 1vw);}
     .burger-menu{display: none;}
+
+    .icons i:hover{
+        color: #01005E;
+        transform:scale(1.5);
+    }
+
+    .text-header a:hover{
+        color: #01005E;
+    }
+    
 
     /*--------- Project-desc ------------------------*/
     .proj-desc > p{
