@@ -464,7 +464,7 @@ a:link, a:visited, a:active{
     text-align: left;
     color: #7a7a7a;
     font-size: calc(0.7em + 1vw);
-    transform: translateX(-100%);
+    transform: translateX(-120%);
 }
 
 .building i{
@@ -509,7 +509,7 @@ a:link, a:visited, a:active{
     text-align: left;
     color: #7a7a7a;
     font-size: calc(0.7em + 1vw);
-    transform: translateX(-100%);
+    transform: translateX(-120%);
 }
 
 .graduation-icon i{
@@ -553,7 +553,7 @@ a:link, a:visited, a:active{
     text-align: left;
     color: #7a7a7a;
     font-size: calc(0.7em + 1vw);
-    transform: translateX(-100%);
+    transform: translateX(-120%);
 
 }
 
@@ -587,7 +587,7 @@ a:link, a:visited, a:active{
     flex-wrap: wrap;
 }
 
-        /* Age */
+    /* Age */
 
 .age-jurney-title{
     width: 95%;
@@ -753,6 +753,7 @@ a:link, a:visited, a:active{
 
 .activities ul li span:nth-child(2){
     color: #7a7a7a;
+    opacity: 0;
 }
 
 .activities ul li {

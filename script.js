@@ -190,18 +190,43 @@ function anim_text ( entries, observer ) {
 
 
 //Animating Pharagraph
-const paReason3 = document.getElementsByClassName('reason3-paragrh')[0].querySelector('p')
-const observer4 = new IntersectionObserver(anim_paragraph, {threshold: 0.1})
+const windowSize = window.screen.width
 
-observer4.observe(paReason3)
+if(windowSize > 800) {
+    const h3Reason1 = document.getElementsByClassName('reason1-subtitle')[0].querySelector('h3')
+    const observer4 = new IntersectionObserver(anim_paragraph, {threshold: 1})
 
-function anim_paragraph ( entries, observer ) {
+    observer4.observe(h3Reason1)
+
+    function anim_paragraph ( entries, observer ) {
+        entries.forEach(( entry ) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    gsap.to('.pa-reasons', {x:'0%',stagger: 0.5 ,duration:1, ease: "slow(0.7, 0.7, false)"})
+                }, 800)
+                observer.unobserve(h3Reason1) //stop to observe the element strong in order to execute the callback only once
+            }
+        })
+    }
+}
+
+
+//Animating span activities 
+const divActivts = document.getElementById('activities')
+const iconsList = Array.from(divActivts.querySelectorAll('ul li i'))
+const lastIcon = iconsList[iconsList.length - 1]
+
+const observer5 = new IntersectionObserver(anim_list, {threshold: 1})
+
+observer5.observe(lastIcon)
+
+function anim_list ( entries, observer ) {
 	entries.forEach(( entry ) => {
 		if (entry.isIntersecting) {
             setTimeout(() => {
-                gsap.to('.pa-reasons', {x:'0%',stagger: 0.5 ,duration:1, ease: "slow(0.7, 0.7, false)"})
+                gsap.to('.activts', {opacity:1, stagger:0.5})
             }, 500)
-			observer.unobserve(paReason3) //stop to observe the element strong in order to execute the callback only once
+			observer.unobserve(lastIcon) //stop to observe the element strong in order to execute the callback only once
 		}
 	})
 }
