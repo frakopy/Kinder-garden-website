@@ -19,13 +19,15 @@ icons.forEach((icon) => {
 
 
 //Modifing whatsapp link
-const div_whatsapp = document.getElementById('whatsapp')
-const linkWhatsap = div_whatsapp.querySelector('a')
+const linkWhatsap = document.getElementById('whatsapp-link')
 
-if(windowSize > 800){
+if(windowSize < 800){
     linkWhatsap.href = 'https:///api.whatsapp.com/send?phone=50764318512'
+}else{
+    linkWhatsap.href = 'https://web.whatsapp.com/send?phone=50764318512'
 }
 
+console.log(linkWhatsap)
 
 //Animation Burger Menu 
 
