@@ -464,7 +464,6 @@ a:link, a:visited, a:active{
     text-align: left;
     color: #7a7a7a;
     font-size: calc(0.7em + 1vw);
-    transform: translateX(-120%);
 }
 
 .building i{
@@ -509,7 +508,6 @@ a:link, a:visited, a:active{
     text-align: left;
     color: #7a7a7a;
     font-size: calc(0.7em + 1vw);
-    transform: translateX(-120%);
 }
 
 .graduation-icon i{
@@ -553,8 +551,6 @@ a:link, a:visited, a:active{
     text-align: left;
     color: #7a7a7a;
     font-size: calc(0.7em + 1vw);
-    transform: translateX(-120%);
-
 }
 
 .health-icon i{
@@ -1118,6 +1114,10 @@ footer {
     .reason1-paragrh, .reason2-paragrh, .reason3-paragrh{
         height: 60%;
         align-items:flex-start;
+    }
+
+    .reason1-paragrh p, .reason2-paragrh p, .reason3-paragrh p{
+        transform: translateX(-120%);
     }
 
     .reason1-subtitle, .reason2-subtitle, .reason3-subtitle{
