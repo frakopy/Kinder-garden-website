@@ -1,3 +1,6 @@
+const windowSize = window.screen.width
+
+
 //Links to social media 
 
 const icons = document.querySelectorAll('.social-net')
@@ -18,12 +21,10 @@ icons.forEach((icon) => {
 //Modifing whatsapp link
 const div_whatsapp = document.getElementById('whatsapp')
 const linkWhatsap = div_whatsapp.querySelector('a')
-const window = window.screen.width
 
-if(window > 800){
+if(windowSize > 800){
     linkWhatsap.href = 'https:///api.whatsapp.com/send?phone=50764318512'
 }
-
 
 
 //Animation Burger Menu 
@@ -201,7 +202,6 @@ function anim_text ( entries, observer ) {
 
 
 //Animating Pharagraph
-const windowSize = window.screen.width
 
 if(windowSize > 800) {
     const h3Reason1 = document.getElementsByClassName('reason1-subtitle')[0].querySelector('h3')
