@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz,wght@8..144,200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+    letter-spacing: 1px;
+}
+
+
+/* Header */
+
+header{
+    width: 100%;
+    padding: 10px;
+    background-color: #4E9F3D;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+header .icons i{
+    font-size: 0.8em;
+    margin-right: 5px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s;
+}
+
+
+.text-header{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.text-header a{
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 2px;
+    font-size: 0.6em;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+
+header .icons, header .text-header, header .burger-menu:hover{
+    cursor: pointer;
+}
+
+/* Big Menu only for big screens */
+
+.big-menu{
+    width: 100%;
+    margin-top:40px;
+    margin-bottom:40px;
+    display: flex;
+    justify-content:center;
+    display: none;
+}
+
+.big-menu ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.big-menu ul li a{
+    font-size: calc(1.5em + 1vw);
+    font-weight: bold;
+    color: #230338;
+    opacity: 0;
+}
+
+.big-menu ul li {
+    position: relative;
+    display: inline-block;
+    transform: scale(0);
+
+}
+
+.big-menu ul li:after {
+    content: "";
+    position: absolute;
+    left:0;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background-color: #A91079;
+    transition: width .5s ease-in-out;
+}
+
+.big-menu ul li:hover:after {
+    width: 100%;
+}
+
+.big-menu ul li a:hover {
+    color: #A91079;
+}
+
+
+/* Burger Menu */
+
+.burger-menu{
+    width: 10%;
+}
+
+.burger-menu > i{
+    font-size: 1em;
+    margin-right: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.burger-container{
+    width: 90%;
+    min-height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    position:fixed;
+    z-index: 20;
+    top:0;
+    transform: translateX(-100%)
+}
+
+.burger-menu-container{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+.icon-x {
+    width: 100%;
+    font-size: 2.5em;
+    padding-right:15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img-brg-menu{
+    width: 100%;
+    height: 10em;
+    background-image: url(/imgs/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.menu{
+    width:100%;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li a {
+    margin-left: 40px;
+    font-size: 1.7em;
+    font-weight: 600;
+    color: #4D4C7D;
+}
+
+.menu ul li{
+    margin-top: 20px;
+}
+
+/* Whatsapp Button */
+.wsp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background-color: #25D366;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 40px;
+    position: fixed;
+    top: 90%;
+    left: 85%;
+    z-index: 10;
+}
+
+
+a:link, a:visited, a:active{
+    color: white;
+    text-decoration: none;
+    cursor:pointer;
+    z-index: 1;  
+}
+
+.wsp::before, .wsp::after {
+    content:"";
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 5px solid #25D366;
+    border-radius: 50%;
+    animation: latido linear 3s infinite;
+}
+
+.wsp a:hover{
+    color: black;
+}
+
+.wsp::after {
+    animation-delay: -1.5s;
+}
+
+@keyframes latido {
+    0% { width:50px; height:50px; border: 3px solid #25D366; }
+    100% { width:70px; height:70px; border: 10px solid transparent; }
+}
+
+
+/* main container */
+
+.main-container{
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* images headers */
+
+.second-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.banner {
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 70px;
+}
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    min-height:40vh;
+    background-color: #EA9ABB;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+
+.logo-footer-cont{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.logo-footer{
+    width: calc(10em + 5vw);
+    height: auto;
+}
+
+.logo-footer-cont p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 80%;
+    font-size: 1em;
+    color: #16003B;
+}
+
+.menu-footer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-footer a{
+    text-decoration: none;
+    margin-top: 20px;
+    color: #16003B;
+    font-size: calc(1em + 1vw);
+    font-weight: bold;
+    width: 15%;
+}
+
+.menu-footer a:hover{
+    color:white;
+}
+
+.copyright{
+    display: flex;
+    justify-content:center;
+    margin-bottom: 80px;
+    width: 90%;
+    font-size: calc(0.5em + 1vw);
+    font-weight: bold;
+    color: #16003B;
+}
+
+.copyright i{
+    margin-right: 3px;
+    font-size: calc(0.5em + 1vw);
+}
+
+
+.social{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    color: white;
+}
+
+.social i{
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.social i:hover{
+    color: #5432D3;
+}
+
+/*------------------------- Responsive Design by means media queries ---------------------------------------*/
+
+@media screen and (min-width: 801px) {
+    
+    /*------------- Header ---------------------------*/
+    header .icons i{font-size: calc(0.5em + 1vw);}
+    .text-header{justify-content: center;}
+    .text-header a{font-size:calc(0.5em + 1vw);}
+    .burger-menu{display: none;}
+
+    .icons i:hover{
+        color: #01005E;
+        transform:scale(1.5);
+    }
+
+    .text-header a:hover{
+        color: #01005E;
+    }
+    
+    /*------------- Program container ------------------------*/
+    
+
+    /*--------------- footer -------------------------------*/ 
+
+    .logo-footer{
+        width: calc(10em + 5vw);
+        height: auto;
+    }
+
+    .logo-footer-cont p{font-size: calc(1em + 1vw);}
+
+    .big-menu{display:block;}
+
+}

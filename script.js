@@ -9,7 +9,7 @@ setInterval(() => {
     if (index === bannerImages.length) {
         index = 0
     }
-    banner.src = `imgs/banner_imgs/${bannerImages[index]}`
+    banner.src = `imgs/banner_imgs/banner_index/${bannerImages[index]}`
     gsap.fromTo(banner, {opacity: 0}, {opacity: 1, duration: 2, ease: "slow(0.7, 0.7, false)"});
     index++
 }, 5000)
