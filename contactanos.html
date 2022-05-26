@@ -84,7 +84,42 @@
             
             <!-- Program Content -->
             <div class="program-container">
-               HERE WE ARE GOING TO PUT CONTENT
+               <div id="contact" class="contact">
+                  <div id="modal-container" class="hide-modal modal-container">
+                     <div class="modal">
+                        El formulario se ha enviado exitosamente!
+                        <i id="close-modal" class="fa-solid fa-circle-xmark"></i>
+                     </div>
+                  </div>
+                  <form id="form-contact" method="post" action="https://formsubmit.co/frako789@gmail.com">
+                     <input type="hidden" name="_captcha" value="false">
+                     <label class="data-label" name="header">Contáctanos</label>
+                     <input class="data-input" type="text" name="Nombre del acudiente" placeholder="Nombre del acudiente">
+                     <input class="data-input" type="text" name="Apellido del acudiente" placeholder="Apellido del acudiente">
+                     <input class="data-input" type="email" name="Email" placeholder="E-mail">
+                     <input class="data-input" type="text" name="Teléfono" placeholder="Teléfono">
+                     <input class="data-input" type="text" name="Nombre del estudiante" placeholder="Nombre del estudiante">
+                     <div class="how-to-contact">
+                        <label class="label-contact" name="label-contact">¿Como desea ser contacatdo?</label>
+                        <div class="options-container">
+                           <ul>
+                              <li>
+                                 <input type="radio" name="contatarme via" value="Llamada Teléfonica">
+                                 <span>Llamada Teléfonica</span>
+                              </li>
+                              <li>
+                                 <input type="radio" name="contatarme via" value="Correo">
+                                 <span>Correo</span>
+                              </li>
+                              <li>
+                                 <input type="radio" name="contatarme via" value="Whatsapp">
+                                 <span>Whatsapp</span>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <button >Enviar</button>
+                  </form>
             </div>
 
             <footer>
@@ -116,6 +151,43 @@
             </footer>
          </div>
       </div>
+
+      <script>
+         const form = document.getElementById('form-contact')
+         const url = 'https://formsubmit.co/frako789@gmail.com'
+         const modalWind = document.getElementById('modal-container')
+         const closeIcon = document.getElementById('close-modal')
+
+         closeIcon.addEventListener('click', () => {
+            gsap.to(".modal-container", {opacity: 0, ease: "slow(0.7, 0.7, false)", duration:1})
+            
+            setTimeout(() => {
+               modalWind.classList.add('hide-modal') //For Allow to run the above gsap animation
+            },2000)
+         })
+
+         form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            const formToSend = new FormData(form)
+            const inputs = Array.from(form.querySelectorAll('.data-input')) 
+            const valInput1 = inputs[0].value
+            const valInput2 = inputs[1].value
+            const valInput3 = inputs[2].value
+            const valInput4 = inputs[3].value
+            const valInput5 = inputs[4].value
+
+            if (valInput1 === '' || valInput2 === '' || valInput3 === '' || valInput4 === '' || valInput5 === ''){
+               alert('Debe completar todos los campos del formulario')
+            }else{
+               fetch(url, {method:'POST', body:formToSend})
+               form.reset()
+               modalWind.classList.remove('hide-modal')
+               gsap.to(".modal-container", {opacity: 1, ease: "slow(0.7, 0.7, false)", duration:1})
+               return false
+            }
+
+         })
+      </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
       <script src="script_menu.js"></script>
    </body>
