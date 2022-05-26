@@ -1,8 +1,21 @@
 const windowSize = window.screen.width
 
+//Change images banner every 5 seconds
+const banner = document.getElementById('banner')
+const bannerImages = ['bn1.png', 'bn2.png', 'bn3.png', 'bn4.png']
+
+let index = 0
+setInterval(() => {
+    if (index === bannerImages.length) {
+        index = 0
+    }
+    banner.src = `imgs/banner_imgs/${bannerImages[index]}`
+    gsap.fromTo(banner, {opacity: 0}, {opacity: 1, duration: 2, ease: "slow(0.7, 0.7, false)"});
+    index++
+}, 5000)
+
 
 //Links to social media 
-
 const icons = document.querySelectorAll('.social-net')
 
 icons.forEach((icon) => {
@@ -11,8 +24,8 @@ icons.forEach((icon) => {
             window.open('https://www.instagram.com/','_blank')
         }else if(icon.classList.contains('facebook')){
             window.open('https://www.facebook.com/','_blank')
-        }else if(icon.classList.contains('twitter')){
-            window.open('https://twitter.com/','_blank')
+        }else if(icon.classList.contains('whatsapp')){
+            linkWhatsap.click()
         }
     })
 })
@@ -27,10 +40,8 @@ if(windowSize < 800){
     linkWhatsap.href = 'https://web.whatsapp.com/send?phone=50764318512'
 }
 
-console.log(linkWhatsap)
 
 //Animation Burger Menu 
-
 const burgerIcon = document.getElementById('icon-bars')
 const xIcon = document.getElementById('icon-x')
 const imgBrgMenu = document.getElementById('img-brg-menu')

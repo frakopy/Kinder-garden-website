@@ -252,9 +252,11 @@ a:link, a:visited, a:active{
     flex-wrap: wrap;
 }
 
-.second-container .banner {
+
+.banner {
     width: 100%;
-    min-height: 10%;
+    object-fit: contain;
+    margin-bottom: 70px;
 }
 
 .second-container .logo-container {
