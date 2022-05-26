@@ -31,13 +31,6 @@ const burgerIcon = document.getElementById('icon-bars')
 const xIcon = document.getElementById('icon-x')
 const imgBrgMenu = document.getElementById('img-brg-menu')
 
-const links = document.querySelectorAll('.menu ul li a')
-
-links.forEach(link => {
-    link.addEventListener('click', () => {
-        gsap.to('.burger-container', {x: '-100%', duration: 1, ease: Power2.easeOut}) //Animation for hide menu
-    })
-})
 
 burgerIcon.addEventListener('click', () => {
     gsap.to('.burger-container', {x: 0, duration: 1, ease: Power2.easeOut}) //Animation for open menu
