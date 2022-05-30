@@ -307,7 +307,7 @@ a:link, a:visited, a:active{
     width: 95%;
     height: 6vh;
     border-radius: 10px;
-    background-color: #FC85AE;
+    background-color: #FF00B0;
     text-decoration: none;
     display: flex;
     justify-content:center;
@@ -333,15 +333,13 @@ a:link, a:visited, a:active{
     text-align: center;
     margin-top: 25px;
     position: relative;
-    background-color: #FFE5E2;
-    border-radius: 3px;
 }
 
 .sec-protocol a{
-    width: 98%;
-    min-height: 8vh;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
-    background-color: #E04DB0;
+    background-color: #93D429;
     text-decoration: none;
     display: flex;
     justify-content:center;
@@ -353,14 +351,9 @@ a:link, a:visited, a:active{
     padding:10px;
 }
 
-.sec-protocol a i{
-    margin-right: 5px;
-}
-
 .sec-protocol .pdf{
-    width: 6em;
-    height: 6em;
-    margin-right: 5px;
+    width: 3em;
+    height: 3em;
     cursor: pointer;
 }
 
@@ -375,26 +368,31 @@ a:link, a:visited, a:active{
 /* susuki phrase */
 
 .susuki-prhase{
-    margin-top: 60px;
-    width: 100%;
-    height: 60vh;
-    background-image: url(/imgs/frase-susuki.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
+    margin-top: 80px;
+    width: 100vw;
+    background-color: #00b2ff;
+    display: flex;
+    justify-content:center;
+    overflow-x: hidden;
     transform: scale(0);
+}
+
+.susuki-prhase img{
+    object-fit: contain;
+    width: 100%;
+    max-width: 100%;
 }
 
 
 /* reasons title */
 
 .reasons{
+    margin-top: 80px;
     width: 100%;
-    height: 215vh;
+    /* height: 215vh; */
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
-    overflow:auto;
 }
 
 .title-reasons{
@@ -403,13 +401,14 @@ a:link, a:visited, a:active{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 100px;
 }
 
 .title-reasons h1{
     width: 80%;
     font-size: calc(1.6em + 1vw);
     text-align: center;
-    color: #b4d802;
+    color: #99219f;
     margin-bottom: 70px;
 }
 
@@ -419,23 +418,35 @@ a:link, a:visited, a:active{
     font-size: calc(1em + 1vw);
     color: #7a7a7a;
     opacity: 0;
-    transform : translateY(-150%)
+    transform : translateY(-150%);
 }
 
 /* reasons description */
 
 .reason-desc{
     width: 100%;
-    min-height:100vh;
     display: flex;
     justify-content: center;
-    margin-top: 25px;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 130px;
 }
 
+.reason-desc h2{
+    color: #00b2ff;
+    font-size: calc(3em + 1vw);
+    margin-bottom: 20px;
+}
+
+.reason-desc h4{
+    color: #FF00B0;
+    font-size: calc(1em + 1vw);
+}
+
+/* ---------------------- Content Removed ---------------------------- */
 /* reason1 */
 
-.reason1{
+/* .reason1{
     width: 100%;
     display: flex;
     justify-content:center;
@@ -476,11 +487,11 @@ a:link, a:visited, a:active{
     border-radius: 50%;
     border: 3px solid #0099cc;
     padding: 15px;
-}
+} */
 
 /* reason2 */
 
-.reason2{
+/* .reason2{
     width: 100%;
     display: flex;
     justify-content:center;
@@ -520,11 +531,11 @@ a:link, a:visited, a:active{
     border-radius: 50%;
     border: 3px solid #b4d802;
     padding: 15px;
-}
+} */
 
 /* reason3 */
 
-.reason3{
+/* .reason3{
     width: 100%;
     display: flex;
     justify-content:center;
@@ -563,7 +574,9 @@ a:link, a:visited, a:active{
     border-radius: 50%;
     border: 3px solid #fe6500;
     padding: 15px;
-}
+} */
+/* -------------------------------------------------------------------- */
+
 
 /* Age and jurney */
 
@@ -695,7 +708,7 @@ a:link, a:visited, a:active{
 
 .div-slider1{
     width: 80%;
-    min-height: 80vh;
+    min-height: 40vh;
     display: flex;
     justify-content:center;
     align-items:center;
@@ -710,7 +723,7 @@ a:link, a:visited, a:active{
 .div-slider1 img{
     width: 90%;
     height: 90%;
-    object-fit: cover;
+    object-fit: contain;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -971,7 +984,7 @@ input[type='radio'] {
 footer {
     width: 100%;
     min-height:40vh;
-    background-color: #EA9ABB;
+    background-color: #752e79;
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
@@ -983,7 +996,6 @@ footer {
     display: flex;
     justify-content:center;
     align-items:center;
-    flex-direction: column;
     margin-top: 50px;
 }
 
@@ -992,31 +1004,67 @@ footer {
     height: auto;
 }
 
-.logo-footer-cont p{
+/* .logo-footer-cont p{
     margin-top: 15px;
     margin-bottom: 15px;
     width: 80%;
     font-size: 1em;
     color: #16003B;
-}
+} */
 
 .menu-footer{
-    width: 80%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .menu-footer a{
     text-decoration: none;
     margin-top: 20px;
-    color: #16003B;
-    font-size: calc(1em + 1vw);
+    color: white;
+    font-size: calc(0.7em + 1vw);
     font-weight: bold;
-    width: 15%;
+    margin-right: 20px;
 }
 
 .menu-footer a:hover{
-    color:white;
+    color: #9eff00;
+}
+
+.options{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+}
+
+.options a{
+    text-decoration: none;
+    margin-top: 20px;
+    color: white;
+    font-size: calc(0.7em + 1vw);
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.options a:hover{
+    color: #9eff00;
+}
+
+.address{
+    margin-top: 70px;
+    margin-bottom: 40px;
+    color: white;
+    font-size: calc(0.3em + 1vw);
+    font-weight: bold;
+    text-align: center;
+}
+
+.separator{
+    height: 60%;
+    border-left: 1px solid white;
+    margin-right: 10px;
 }
 
 .copyright{
@@ -1026,7 +1074,7 @@ footer {
     width: 90%;
     font-size: calc(0.5em + 1vw);
     font-weight: bold;
-    color: #16003B;
+    color: white;
 }
 
 .copyright i{
@@ -1051,7 +1099,7 @@ footer {
 }
 
 .social i:hover{
-    color: #5432D3;
+    color: #9eff00;
 }
 
 /*------------------------- Responsive Design by means media queries ---------------------------------------*/
@@ -1065,12 +1113,12 @@ footer {
     .burger-menu{display: none;}
 
     .icons i:hover{
-        color: #01005E;
+        color: #ffe500;
         transform:scale(1.5);
     }
 
     .text-header a:hover{
-        color: #01005E;
+        color: #ffe500;
     }
     
 
@@ -1101,13 +1149,13 @@ footer {
     }
 
     .sec-protocol a {
-        font-size: calc(0.5em + 1vw);
         width: 85%;
+        border-radius: 30px;
     }
 
     /*--------------- Reasons -------------------------------*/
     .reasons{
-        height: 180vh;
+        /* height: 50vh; */
         align-items: center;
     }
 
@@ -1132,7 +1180,10 @@ footer {
     .age-jurney{margin-top:0px;}
 
     /*--------------- container-slider1 -------------------------------*/
-    .div-slider1{width: 60%;}
+    .div-slider1{
+        width: 60%;
+        min-height: 75vh;
+    }
 
     /*--------------- acordion -------------------------------*/ 
     .accordion{

@@ -2,7 +2,7 @@ const windowSize = window.screen.width
 
 //Change images banner every 5 seconds
 const banner = document.getElementById('banner')
-const bannerImages = ['bn1.png', 'bn2.png', 'bn3.png', 'bn4.png']
+const bannerImages = ['bn3.png', 'bn2.png', 'bn1.png']
 
 let index = 0
 setInterval(() => {
@@ -21,9 +21,9 @@ const icons = document.querySelectorAll('.social-net')
 icons.forEach((icon) => {
     icon.addEventListener('click', (e) => {
         if(icon.classList.contains('instagram')){
-            window.open('https://www.instagram.com/','_blank')
+            window.open('https://instagram.com/encantojardinmusical?igshid=YmMyMTA2M2Y=','_blank')
         }else if(icon.classList.contains('facebook')){
-            window.open('https://www.facebook.com/','_blank')
+            window.open('https://www.facebook.com/encantojardinmusical/','_blank')
         }else if(icon.classList.contains('whatsapp')){
             linkWhatsap.click()
         }
@@ -35,9 +35,9 @@ icons.forEach((icon) => {
 const linkWhatsap = document.getElementById('whatsapp-link')
 
 if(windowSize < 800){
-    linkWhatsap.href = 'https:///api.whatsapp.com/send?phone=50764318512'
+    linkWhatsap.href = 'https:///api.whatsapp.com/send?phone=573125397320'
 }else{
-    linkWhatsap.href = 'https://web.whatsapp.com/send?phone=50764318512'
+    linkWhatsap.href = 'https://web.whatsapp.com/send?phone=573125397320'
 }
 
 
@@ -46,13 +46,6 @@ const burgerIcon = document.getElementById('icon-bars')
 const xIcon = document.getElementById('icon-x')
 const imgBrgMenu = document.getElementById('img-brg-menu')
 
-// const links = document.querySelectorAll('.menu ul li a')
-
-// links.forEach(link => {
-//     link.addEventListener('click', () => {
-//         gsap.to('.burger-container', {x: '-100%', duration: 1, ease: Power2.easeOut}) //Animation for hide menu
-//     })
-// })
 
 burgerIcon.addEventListener('click', () => {
     gsap.to('.burger-container', {x: 0, duration: 1, ease: Power2.easeOut}) //Animation for open menu
@@ -85,7 +78,6 @@ divPdf.addEventListener('click', (e) => {
 })
 
 
-
 //Acordion animation
 const acordionBtns = Array.from(document.getElementsByClassName('accordion')) 
 
@@ -105,9 +97,10 @@ acordionBtns.forEach(btn => {
     })
 })
 
-//Form validation and prevent redirection page of formsubmit.co
+//Form validation and prevent redirection to formsubmit.com web page
 const form = document.getElementById('form-contact')
-const url = 'https://formsubmit.co/frako789@gmail.com'
+//The number c47b2dec7af80257f08d34f8c28cf591 is provided by form submit in the body email received for activation the first time
+const url = 'https://formsubmit.co/ea1b3a4003d31f85661ca395d39818d4' 
 const modalWind = document.getElementById('modal-container')
 const closeIcon = document.getElementById('close-modal')
 
@@ -206,7 +199,7 @@ function anim_text ( entries, observer ) {
 	entries.forEach(( entry ) => {
 		if (entry.isIntersecting) {
             setTimeout(() => {
-                gsap.to(h2, {y:'150%', duration:1.5, ease: Bounce.easeOut, opacity: 1})
+                gsap.to(h2, {y:'0%', duration:1.5, ease: Bounce.easeOut, opacity: 1})
             }, 800)
 			observer.unobserve(h2) //stop to observe the element strong in order to execute the callback only once
 		}
@@ -216,23 +209,23 @@ function anim_text ( entries, observer ) {
 
 //Animating Pharagraph
 
-if(windowSize > 800) {
-    const h3Reason1 = document.getElementsByClassName('reason1-subtitle')[0].querySelector('h3')
-    const observer4 = new IntersectionObserver(anim_paragraph, {threshold: 1})
+// if(windowSize > 800) {
+//     const h3Reason1 = document.getElementsByClassName('reason1-subtitle')[0].querySelector('h3')
+//     const observer4 = new IntersectionObserver(anim_paragraph, {threshold: 1})
 
-    observer4.observe(h3Reason1)
+//     observer4.observe(h3Reason1)
 
-    function anim_paragraph ( entries, observer ) {
-        entries.forEach(( entry ) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    gsap.to('.pa-reasons', {x:'0%',stagger: 0.5 ,duration:1, ease: "slow(0.7, 0.7, false)"})
-                }, 800)
-                observer.unobserve(h3Reason1) //stop to observe the element strong in order to execute the callback only once
-            }
-        })
-    }
-}
+//     function anim_paragraph ( entries, observer ) {
+//         entries.forEach(( entry ) => {
+//             if (entry.isIntersecting) {
+//                 setTimeout(() => {
+//                     gsap.to('.pa-reasons', {x:'0%',stagger: 0.5 ,duration:1, ease: "slow(0.7, 0.7, false)"})
+//                 }, 800)
+//                 observer.unobserve(h3Reason1) //stop to observe the element strong in order to execute the callback only once
+//             }
+//         })
+//     }
+// }
 
 
 //Animating span activities 
