@@ -253,6 +253,8 @@ a:link, a:visited, a:active{
     flex-wrap: wrap;
 }
 
+
+
 /* Banner */
 
 .banner {
@@ -262,7 +264,8 @@ a:link, a:visited, a:active{
 }
 
 
-/* Images content */
+/*------------------ About Us HTML file -----------------------*/
+
 
 .about-container {
     width: 100%;
@@ -274,7 +277,99 @@ a:link, a:visited, a:active{
 .about-container img{
     width: 100%;
     object-fit: contain;
+}
 
+/*---------------------- Programs HTML file --------------------*/
+
+.program-container{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+/* Image */
+
+.program-container img{
+    margin-top: 80px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 80px;
+}
+
+/* Acordion menu */
+
+.accordion-menu{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+}
+
+.accordion{
+    height: 40px;
+    transition: 0.4s;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display:flex;
+    align-items:center;
+    width: 90%;
+    border-radius: 10px;
+    color: white;
+    background-color: #a81daf;
+    cursor: pointer;
+}
+
+
+.accordion-menu .active-btn{
+    background-color: #93d429;
+    color: white;
+}
+
+.panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content:center;
+}
+
+.panel p{
+    width: 80%;
+    color: #7a7a7a;
+}
+
+.accordion i {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/* Images in columns */
+
+.col-imgs{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 150px;
+
+}
+
+.col-imgs img, .col-imgs video {
+    max-width: 30em;
+    max-height: 30em;
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    margin-bottom: 30px;
+    border-radius: 30px;
 }
 
 
@@ -413,6 +508,38 @@ footer {
         color: #ffe500;
     }
     
+    /*--------------- acordion -------------------------------*/ 
+    .accordion{
+        height: calc(2em + 1vh);
+        font-size: calc(0.6em + 1vw);
+        width: 82%;
+    }
+
+    .accordion i{
+        margin-left: 30px;
+    }
+    
+    .accordion-menu{
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    /*--------------- col-imgs -------------------------------*/ 
+
+    .col-imgs{
+        margin-top: 90px;
+        width: 85%;
+        justify-content:center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: 1 1 1;    
+    }
+    
+    .col-imgs img, .col-imgs video {
+        max-width: 20em;
+        max-height: 20em;
+        margin-right: 30px;
+    }
 
     /*--------------- footer -------------------------------*/ 
 

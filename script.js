@@ -78,25 +78,6 @@ divPdf.addEventListener('click', (e) => {
 })
 
 
-//Acordion animation
-const acordionBtns = Array.from(document.getElementsByClassName('accordion')) 
-
-acordionBtns.forEach(btn => {
-    btn.addEventListener('click', () =>{
-        btn.classList.toggle('active-btn')
-        const icon = btn.querySelector('i')
-        const id_icon = icon.getAttribute('id')
-        let panel = btn.nextElementSibling
-        if (panel.style.maxHeight) {
-            gsap.to(`#${id_icon}`, {rotation: 0, duration:0.5 })
-            panel.style.maxHeight = null;
-        }else {
-            gsap.to(`#${id_icon}`, {rotation: -180, duration:0.5 })
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    })
-})
-
 //Form validation and prevent redirection to formsubmit.com web page
 const form = document.getElementById('form-contact')
 //The number c47b2dec7af80257f08d34f8c28cf591 is provided by form submit in the body email received for activation the first time
@@ -249,7 +230,3 @@ function anim_list ( entries, observer ) {
 }
 
 
-//Scroll Reveal animation
-
-ScrollReveal().reveal('.imgs-col1', { delay: 300 })
-ScrollReveal().reveal('.vid-col1', { delay: 300 })

@@ -825,26 +825,6 @@ a:link, a:visited, a:active{
     margin-left: 5px;
 }
 
-/* Images in columns */
-
-.col-imgs{
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.col-imgs img, .col-imgs video {
-    max-width: 30em;
-    max-height: 30em;
-    width: 70%;
-    height: 70%;
-    object-fit: cover;
-    margin-bottom: 30px;
-    border-radius: 30px;
-}
 
 /* Contact us */
 
@@ -1004,13 +984,6 @@ footer {
     height: auto;
 }
 
-/* .logo-footer-cont p{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 80%;
-    font-size: 1em;
-    color: #16003B;
-} */
 
 .menu-footer{
     width: 100%;
@@ -1201,22 +1174,7 @@ footer {
         margin-bottom: 80px;
     }
 
-    /*--------------- col-imgs -------------------------------*/ 
 
-    .col-imgs{
-        margin-top: 90px;
-        width: 85%;
-        justify-content:center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        flex: 1 1 1;    
-    }
-    
-    .col-imgs img, .col-imgs video {
-        max-width: 20em;
-        max-height: 20em;
-        margin-right: 30px;
-    }
 
     /*--------------- contact us -------------------------------*/ 
     .contact form{width: 60%;}    

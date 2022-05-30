@@ -49,3 +49,25 @@ imgBrgMenu.addEventListener('click', () => {
 gsap.to(".bg-menu", {opacity: 1, stagger: 0.5, ease: "slow(0.7, 0.7, false)", duration: 1.5})
 gsap.to(".bg-li", { stagger: 0.5, scale: 1, ease: "slow(0.7, 0.7, false)", duration: 1})
 
+//Acordion animation
+const acordionBtns = Array.from(document.getElementsByClassName('accordion')) 
+
+acordionBtns.forEach(btn => {
+    btn.addEventListener('click', () =>{
+        btn.classList.toggle('active-btn')
+        const icon = btn.querySelector('i')
+        const id_icon = icon.getAttribute('id')
+        let panel = btn.nextElementSibling
+        if (panel.style.maxHeight) {
+            gsap.to(`#${id_icon}`, {rotation: 0, duration:0.5 })
+            panel.style.maxHeight = null;
+        }else {
+            gsap.to(`#${id_icon}`, {rotation: -180, duration:0.5 })
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    })
+})
+
+//Scroll Reveal animation for images and videos
+ScrollReveal().reveal('.imgs-col1', { delay: 300 })
+ScrollReveal().reveal('.vid-col1', { delay: 300 })
