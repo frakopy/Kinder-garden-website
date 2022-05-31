@@ -740,13 +740,16 @@ footer {
     color: white;
 }
 
-.social i{
-    margin-right: 50px;
-    cursor: pointer;
+.social-icons{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
 }
+
 
 .social i:hover{
     color: #9eff00;
+    cursor: pointer;
 }
 
 .copyright{
@@ -864,6 +867,7 @@ footer {
     .big-menu{display:block;}
 
     .social{font-size: 2.5em;}
+    .social-icons{width:15%;}
     
     .copyright i{font-size: calc(0.2em + 1vw);}
     
