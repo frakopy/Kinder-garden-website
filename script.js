@@ -78,48 +78,6 @@ divPdf.addEventListener('click', (e) => {
 })
 
 
-//Form validation and prevent redirection to formsubmit.com web page
-const form = document.getElementById('form-contact')
-//The number c47b2dec7af80257f08d34f8c28cf591 is provided by form submit in the body email received for activation the first time
-const url = 'https://formsubmit.co/ea1b3a4003d31f85661ca395d39818d4'
-const modalWind = document.getElementById('modal-container')
-const closeIcon = document.getElementById('close-modal')
-
-closeIcon.addEventListener('click', () => {
-    gsap.to(".modal-container", {opacity: 0, ease: "slow(0.7, 0.7, false)", duration:1})
-    
-    setTimeout(() => {
-        modalWind.classList.add('hide-modal') //For Allow to run the above gsap animation
-    },2000)
-})
-
-
-form.addEventListener('submit', (e) => {
-
-    e.preventDefault()
-    
-    const formToSend = new FormData(form)
-
-    const inputs = Array.from(form.querySelectorAll('.data-input')) 
-    const valInput1 = inputs[0].value
-    const valInput2 = inputs[1].value
-    const valInput3 = inputs[2].value
-    const valInput4 = inputs[3].value
-    const valInput5 = inputs[4].value
-
-    if (valInput1 === '' || valInput2 === '' || valInput3 === '' || valInput4 === '' || valInput5 === ''){
-        alert('Debe completar todos los campos del formulario')
-    }else{
-        fetch(url, {method:'POST', body:formToSend})
-        form.reset()
-        modalWind.classList.remove('hide-modal')
-        gsap.to(".modal-container", {opacity: 1, ease: "slow(0.7, 0.7, false)", duration:1})
-        return false
-    }
-
-})
-
-
 //Animation slider 1
 gsap.to(".img-sldr1", {x: '0%', stagger: 5,  ease: "slow(0.7, 0.7, false)", repeat: -1, duration: 2})
 

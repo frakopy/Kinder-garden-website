@@ -298,9 +298,6 @@ a:link, a:visited, a:active{
     height: 5vh;
     text-align: center;
     margin-top: 25px;
-    /* position: fixed;
-    top:0px;
-    z-index:10; */
 }
 
 .schedule-date a{
@@ -980,7 +977,7 @@ footer {
 }
 
 .logo-footer{
-    width: calc(10em + 5vw);
+    width: calc(25em + 5vw);
     height: auto;
 }
 
@@ -1124,7 +1121,7 @@ footer {
     }
 
     .sec-protocol a {
-        width: 85%;
+        width: 100%;
         border-radius: 30px;
     }
 
@@ -1187,7 +1184,7 @@ footer {
     /*--------------- footer -------------------------------*/ 
 
     .logo-footer{
-        width: calc(10em + 5vw);
+        width: calc(30em + 5vw);
         height: auto;
     }
 
