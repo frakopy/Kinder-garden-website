@@ -81,7 +81,7 @@ divPdf.addEventListener('click', (e) => {
 //Form validation and prevent redirection to formsubmit.com web page
 const form = document.getElementById('form-contact')
 //The number c47b2dec7af80257f08d34f8c28cf591 is provided by form submit in the body email received for activation the first time
-const url = 'https://formsubmit.co/ea1b3a4003d31f85661ca395d39818d4' 
+const url = 'https://formsubmit.co/ea1b3a4003d31f85661ca395d39818d4'
 const modalWind = document.getElementById('modal-container')
 const closeIcon = document.getElementById('close-modal')
 

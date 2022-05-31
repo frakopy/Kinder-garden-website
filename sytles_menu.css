@@ -272,11 +272,14 @@ a:link, a:visited, a:active{
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
+    margin-top: 90px;
 }
 
 .about-container img{
     width: 100%;
     object-fit: contain;
+    margin-bottom: 100px;
+
 }
 
 /*---------------------- Programs HTML file --------------------*/
@@ -404,6 +407,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 .menu-footer a{
@@ -424,6 +428,7 @@ footer {
     display: flex;
     justify-content:center;
     align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 .options a{
@@ -449,7 +454,7 @@ footer {
 }
 
 .separator{
-    height: 60%;
+    height: calc(1em + 1vw);
     border-left: 1px solid white;
     margin-right: 10px;
 }
