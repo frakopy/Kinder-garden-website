@@ -81,7 +81,7 @@
          <!-- ------------------------------------------- -->
          <div class="virtual-container">
             <div class="virtual-logo">
-               <img src="/imgs/plataforma_virtual_imgs/logo_plataforma_virtual.png" alt="logo-plataforma-virtual">
+               <img class="logo-VrtPlatfrm" src="/imgs/plataforma_virtual_imgs/logo_plataforma_virtual.png" alt="logo-plataforma-virtual">
                <div class="paragraph-container">
                   <p>
                      EnCanto Jardín Musical usa la aplicación Cuaderno Rojo<br>
@@ -158,6 +158,9 @@
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
       <script src="script_menu.js"></script>
+      <script>
+         gsap.to('.logo-VrtPlatfrm', {x:'0%', duration:4, ease: "elastic.out(1, 0.3)"})
+      </script>
    </body>
 </html>
 

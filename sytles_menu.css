@@ -671,6 +671,9 @@ input[type='radio'] {
     margin-top: 50px;
 }
 
+/* For animate logo images */
+.logo-VrtPlatfrm{transform: translateX(-100%)}
+
 .paragraph-container{
     width: 100%;
     text-align: center;
