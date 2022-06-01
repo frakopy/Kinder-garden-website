@@ -85,28 +85,6 @@ gsap.to(".img-sldr1", {x: '0%', stagger: 5,  ease: "slow(0.7, 0.7, false)", repe
 gsap.to(".bg-menu", {opacity: 1, stagger: 0.5, ease: "slow(0.7, 0.7, false)", duration: 1.5})
 gsap.to(".bg-li", { stagger: 0.5, scale: 1, ease: "slow(0.7, 0.7, false)", duration: 1})
 
-//Animation paragraph project description
-const divScheduleDate = document.getElementById('schedule-date')
-
-const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-}
-
-const observer = new IntersectionObserver(animate_p, options)
-observer.observe(divScheduleDate)
-
-function animate_p ( entries, observer ) {
-	entries.forEach(( entry ) => {
-		if (entry.isIntersecting) {
-            // console.log(`This element was intercepted ${entry}`)
-			gsap.to(".proj-desc", {y:'0%', opacity: 1, ease: "slow(0.7, 0.7, false)", duration: 2})
-			observer.unobserve(divScheduleDate) //stop to observe the element strong in order to execute the callback only once
-		}
-	})
-}
-
 
 //Animating image susuki phrase
 const susukiPhrase = document.getElementById('susuki-ph')
@@ -128,22 +106,47 @@ function anim_susuki ( entries, observer ) {
 }
 
 
+// ------------------------------- Bellow are the animations that has been removed -------------------------------------
+
+
+//Animation paragraph project description
+// const divScheduleDate = document.getElementById('schedule-date')
+
+// const options = {
+//     root: null,
+//     rootMargin: '0px',
+//     threshold: 0.1
+// }
+
+// const observer = new IntersectionObserver(animate_p, options)
+// observer.observe(divScheduleDate)
+
+// function animate_p ( entries, observer ) {
+// 	entries.forEach(( entry ) => {
+// 		if (entry.isIntersecting) {
+//             // console.log(`This element was intercepted ${entry}`)
+// 			gsap.to(".proj-desc", {y:'0%', opacity: 1, ease: "slow(0.7, 0.7, false)", duration: 2})
+// 			observer.unobserve(divScheduleDate) //stop to observe the element strong in order to execute the callback only once
+// 		}
+// 	})
+// }
+
 //Animation title reasons 
-const h2 = document.getElementById('text-reasons').querySelector('h2')
-const observer3 = new IntersectionObserver(anim_text, {threshold: 1})
+// const h2 = document.getElementById('text-reasons').querySelector('h2')
+// const observer3 = new IntersectionObserver(anim_text, {threshold: 1})
 
-observer3.observe(h2)
+// observer3.observe(h2)
 
-function anim_text ( entries, observer ) {
-	entries.forEach(( entry ) => {
-		if (entry.isIntersecting) {
-            setTimeout(() => {
-                gsap.to(h2, {y:'0%', duration:1.5, ease: Bounce.easeOut, opacity: 1})
-            }, 800)
-			observer.unobserve(h2) //stop to observe the element strong in order to execute the callback only once
-		}
-	})
-}
+// function anim_text ( entries, observer ) {
+// 	entries.forEach(( entry ) => {
+// 		if (entry.isIntersecting) {
+//             setTimeout(() => {
+//                 gsap.to(h2, {y:'0%', duration:1.5, ease: Bounce.easeOut, opacity: 1})
+//             }, 800)
+// 			observer.unobserve(h2) //stop to observe the element strong in order to execute the callback only once
+// 		}
+// 	})
+// }
 
 
 //Animating Pharagraph
@@ -168,23 +171,23 @@ function anim_text ( entries, observer ) {
 
 
 //Animating span activities 
-const divActivts = document.getElementById('activities')
-const iconsList = Array.from(divActivts.querySelectorAll('ul li i'))
-const lastIcon = iconsList[iconsList.length - 1]
+// const divActivts = document.getElementById('activities')
+// const iconsList = Array.from(divActivts.querySelectorAll('ul li i'))
+// const lastIcon = iconsList[iconsList.length - 1]
 
-const observer5 = new IntersectionObserver(anim_list, {threshold: 1})
+// const observer5 = new IntersectionObserver(anim_list, {threshold: 1})
 
-observer5.observe(lastIcon)
+// observer5.observe(lastIcon)
 
-function anim_list ( entries, observer ) {
-	entries.forEach(( entry ) => {
-		if (entry.isIntersecting) {
-            setTimeout(() => {
-                gsap.to('.activts', {opacity:1, stagger:0.5})
-            }, 500)
-			observer.unobserve(lastIcon) //stop to observe the element strong in order to execute the callback only once
-		}
-	})
-}
+// function anim_list ( entries, observer ) {
+// 	entries.forEach(( entry ) => {
+// 		if (entry.isIntersecting) {
+//             setTimeout(() => {
+//                 gsap.to('.activts', {opacity:1, stagger:0.5})
+//             }, 500)
+// 			observer.unobserve(lastIcon) //stop to observe the element strong in order to execute the callback only once
+// 		}
+// 	})
+// }
 
 
