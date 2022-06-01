@@ -1,5 +1,22 @@
 const windowSize = window.screen.width
 
+//Reading a PDF document 
+const divPdf = document.getElementsByClassName('sec-protocol')[0]
+const pdfLink = document.getElementById('pdf-link')
+
+
+fetch('/manual/manual.pdf') .then(result => result.blob()) .then(pdf => {
+pdfLink.href= URL.createObjectURL(pdf)
+})
+
+divPdf.addEventListener('click', (e) => {
+    const element = e.target
+    if(element.classList.contains('manual')){
+        pdfLink.click()
+    }
+})
+
+
 //Change images banner every 5 seconds
 const banner = document.getElementById('banner')
 const bannerImages = ['bn3.png', 'bn2.png', 'bn1.png']
@@ -59,23 +76,6 @@ imgBrgMenu.addEventListener('click', () => {
     gsap.to('.burger-container', {x: '-100%', duration: 1, ease: Power2.easeOut}) //Animation for hide menu
 })
 
-
-
-//Reading a PDF document 
-const divPdf = document.getElementsByClassName('sec-protocol')[0]
-const pdfLink = document.getElementById('pdf-link')
-
-
-fetch('/manual/manual.pdf') .then(result => result.blob()) .then(pdf => {
-pdfLink.href= URL.createObjectURL(pdf)
-})
-
-divPdf.addEventListener('click', (e) => {
-    const element = e.target
-    if(element.classList.contains('manual')){
-        pdfLink.click()
-    }
-})
 
 
 //Animation slider 1

@@ -5,7 +5,7 @@ const divPdf = document.getElementsByClassName('sec-protocol')[0]
 const pdfLink = document.getElementById('pdf-link')
 
 
-fetch('/manual/PortafolioEncanto.pdf') .then(result => result.blob()) .then(pdf => {
+fetch('/manual/manual.pdf') .then(result => result.blob()) .then(pdf => {
 pdfLink.href= URL.createObjectURL(pdf)
 })
 
