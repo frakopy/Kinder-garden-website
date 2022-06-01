@@ -84,7 +84,7 @@
             
             <!-- Program Content -->
             <div class="program-container">
-               <img src="imgs/programas_imgs/img1.png" alt="levels">
+               <img class="levels-img" src="imgs/programas_imgs/img1.png" alt="levels">
             </div>
             
             <div class="accordion-menu">
@@ -209,7 +209,11 @@
       <script src="https://unpkg.com/scrollreveal"></script> 
       <script src="script_menu.js"></script>
       <script>
+         //Animating levels image
+         gsap.fromTo('.banner', {scale:0, opacity:0}, {rotation: 360, scale:1,opacity:1, ease: "slow(0.7, 0.7, false)", duration:3})
+
          //Scroll Reveal animation for images and videos
+         ScrollReveal().reveal('.levels-img', { delay: 1300 })
          ScrollReveal().reveal('.imgs-col1', { delay: 200 })
          ScrollReveal().reveal('.vid-col1', { delay: 200 })
       </script>
