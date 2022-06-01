@@ -86,6 +86,28 @@ gsap.to(".bg-menu", {opacity: 1, stagger: 0.5, ease: "slow(0.7, 0.7, false)", du
 gsap.to(".bg-li", { stagger: 0.5, scale: 1, ease: "slow(0.7, 0.7, false)", duration: 1})
 
 
+//Animation paragraph project description
+const divScheduleDate = document.getElementById('schedule-date')
+
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+}
+
+const observer = new IntersectionObserver(animate_p, options)
+observer.observe(divScheduleDate)
+
+function animate_p ( entries, observer ) {
+	entries.forEach(( entry ) => {
+		if (entry.isIntersecting) {
+            // console.log(`This element was intercepted ${entry}`)
+			gsap.to(".proj-desc", {y:'0%', opacity: 1, ease: "slow(0.7, 0.7, false)", duration: 2})
+			observer.unobserve(divScheduleDate) //stop to observe the element strong in order to execute the callback only once
+		}
+	})
+}
+
 //Animating image susuki phrase
 const susukiPhrase = document.getElementById('susuki-ph')
 
@@ -109,27 +131,7 @@ function anim_susuki ( entries, observer ) {
 // ------------------------------- Bellow are the animations that has been removed -------------------------------------
 
 
-//Animation paragraph project description
-// const divScheduleDate = document.getElementById('schedule-date')
 
-// const options = {
-//     root: null,
-//     rootMargin: '0px',
-//     threshold: 0.1
-// }
-
-// const observer = new IntersectionObserver(animate_p, options)
-// observer.observe(divScheduleDate)
-
-// function animate_p ( entries, observer ) {
-// 	entries.forEach(( entry ) => {
-// 		if (entry.isIntersecting) {
-//             // console.log(`This element was intercepted ${entry}`)
-// 			gsap.to(".proj-desc", {y:'0%', opacity: 1, ease: "slow(0.7, 0.7, false)", duration: 2})
-// 			observer.unobserve(divScheduleDate) //stop to observe the element strong in order to execute the callback only once
-// 		}
-// 	})
-// }
 
 //Animation title reasons 
 // const h2 = document.getElementById('text-reasons').querySelector('h2')
