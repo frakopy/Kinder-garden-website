@@ -1,5 +1,21 @@
 const windowSize = window.screen.width
 
+//Reading a PDF document 
+const divPdf = document.getElementsByClassName('sec-protocol')[0]
+const pdfLink = document.getElementById('pdf-link')
+
+
+fetch('/manual/PortafolioEncanto.pdf') .then(result => result.blob()) .then(pdf => {
+pdfLink.href= URL.createObjectURL(pdf)
+})
+
+divPdf.addEventListener('click', (e) => {
+    const element = e.target
+    if(element.classList.contains('manual')){
+        pdfLink.click()
+    }
+})
+
 //Links to social media 
 const icons = document.querySelectorAll('.social-net')
 
@@ -103,21 +119,6 @@ form.addEventListener('submit', (e) => {
     }
 })
 
-//Reading a PDF document 
-const divPdf = document.getElementsByClassName('sec-protocol')[0]
-const pdfLink = document.getElementById('pdf-link')
-
-
-fetch('/manual/PortafolioEncanto.pdf') .then(result => result.blob()) .then(pdf => {
-pdfLink.href= URL.createObjectURL(pdf)
-})
-
-divPdf.addEventListener('click', (e) => {
-    const element = e.target
-    if(element.classList.contains('manual')){
-        pdfLink.click()
-    }
-})
 
 //Scroll Reveal animation for images and videos
 ScrollReveal().reveal('.imgs-col1', { delay: 200 })

@@ -79,7 +79,7 @@ divPdf.addEventListener('click', (e) => {
 
 
 //Animation slider 1
-gsap.to(".img-sldr1", {x: '0%', stagger: 5,  ease: "slow(0.7, 0.7, false)", repeat: -1, duration: 2})
+gsap.to(".img-sldr1", {x: '0%', stagger: 5,  ease: "slow(0.7, 0.7, false)", repeat: -1, duration: 2, repeatDelay: 5})
 
 //Animation big menu
 gsap.to(".bg-menu", {opacity: 1, stagger: 0.5, ease: "slow(0.7, 0.7, false)", duration: 1.5})
