@@ -126,7 +126,7 @@
                      <button >Enviar</button>
                   </form>
                   <div class="img2-container">
-                     <img src="/imgs/concatanos_imgs/contacto.png" alt="contacto-img">
+                     <img class="contacto-img" src="/imgs/concatanos_imgs/contacto.png" alt="contacto-img">
                   </div>
                </div>
                <div class="btns-container">
@@ -240,7 +240,35 @@
       </script>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+      <script src="https://unpkg.com/scrollreveal"></script> 
       <script src="script_menu.js"></script>
+      <script>
+         //Animating logo image
+         gsap.fromTo('.logo-image', {scale:2.5}, {scale:1, duration:3})
+
+         //Animating image using scrollreveal
+         ScrollReveal().reveal('.contacto-img', { delay: 1300 })
+
+         //Animating boxes whit rotation
+         const susukiPhrase = document.getElementById('susuki-ph')
+
+         const observer2 = new IntersectionObserver(anim_susuki, {threshold: 1})
+
+         observer2.observe(susukiPhrase)
+
+         function anim_susuki ( entries, observer ) {
+            entries.forEach(( entry ) => {
+               if (entry.isIntersecting) {
+                     // console.log(`This element was intercepted ${entry}`)
+                     setTimeout(() => {
+                        gsap.to(susukiPhrase, {scale: 1, ease: "slow(0.7, 0.7, false)", duration: 2})
+                     }, 500)
+                  observer.unobserve(susukiPhrase) //stop to observe the element strong in order to execute the callback only once
+               }
+            })
+         }
+
+      </script>
    </body>
 </html>
 
