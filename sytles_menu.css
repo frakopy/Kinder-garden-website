@@ -489,6 +489,7 @@ form button{
     display: flex;
     flex-direction: column;
     align-items:center;
+    margin-top: 10px;
 }
 
 .options-container ul{
@@ -502,7 +503,7 @@ form button{
 } 
 
 input[type='radio'] { 
-    transform: scale(1.3); 
+    transform: scale(1); 
 }
 
 /* Modal Window */
@@ -900,6 +901,7 @@ footer {
     .contact form{width: 60%;}    
     .data-input{height: 2.5em;}
     form button{height: 2.5em;}
+    input[type='radio'] {transform: scale(1.3);}
     .logo-image{
         width:50%;
         margin-top: 50px;

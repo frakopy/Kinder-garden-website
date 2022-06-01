@@ -6,9 +6,9 @@ const icons = document.querySelectorAll('.social-net')
 icons.forEach((icon) => {
     icon.addEventListener('click', (e) => {
         if(icon.classList.contains('instagram')){
-            window.open('https://www.instagram.com/','_blank')
+            window.open('https://instagram.com/encantojardinmusical?igshid=YmMyMTA2M2Y=','_blank')
         }else if(icon.classList.contains('facebook')){
-            window.open('https://www.facebook.com/','_blank')
+            window.open('https://www.facebook.com/encantojardinmusical/','_blank')
         }else if(icon.classList.contains('whatsapp')){
             linkWhatsap.click()
         }
@@ -20,9 +20,9 @@ icons.forEach((icon) => {
 const linkWhatsap = document.getElementById('whatsapp-link')
 
 if(windowSize < 800){
-    linkWhatsap.href = 'https:///api.whatsapp.com/send?phone=50764318512'
+    linkWhatsap.href = 'https:///api.whatsapp.com/send?phone=573125397320'
 }else{
-    linkWhatsap.href = 'https://web.whatsapp.com/send?phone=50764318512'
+    linkWhatsap.href = 'https://web.whatsapp.com/send?phone=573125397320'
 }
 
 
