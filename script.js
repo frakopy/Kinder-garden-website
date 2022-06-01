@@ -128,27 +128,24 @@ function anim_susuki ( entries, observer ) {
 }
 
 
-// ------------------------------- Bellow are the animations that has been removed -------------------------------------
-
-
-
-
 //Animation title reasons 
-// const h2 = document.getElementById('text-reasons').querySelector('h2')
-// const observer3 = new IntersectionObserver(anim_text, {threshold: 1})
+const h2 = document.getElementById('text-reasons').querySelector('h2')
+const observer3 = new IntersectionObserver(anim_text, {threshold: 1})
 
-// observer3.observe(h2)
+observer3.observe(h2)
 
-// function anim_text ( entries, observer ) {
-// 	entries.forEach(( entry ) => {
-// 		if (entry.isIntersecting) {
-//             setTimeout(() => {
-//                 gsap.to(h2, {y:'0%', duration:1.5, ease: Bounce.easeOut, opacity: 1})
-//             }, 800)
-// 			observer.unobserve(h2) //stop to observe the element strong in order to execute the callback only once
-// 		}
-// 	})
-// }
+function anim_text ( entries, observer ) {
+	entries.forEach(( entry ) => {
+		if (entry.isIntersecting) {
+            setTimeout(() => {
+                gsap.to(h2, {y:'0%', duration:1.5, ease: Bounce.easeOut, opacity: 1})
+            }, 800)
+			observer.unobserve(h2) //stop to observe the element strong in order to execute the callback only once
+		}
+	})
+}
+
+// ------------------------------- Bellow are the animations that has been removed -------------------------------------
 
 
 //Animating Pharagraph
