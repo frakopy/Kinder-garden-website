@@ -640,7 +640,12 @@ input[type='radio'] {
     height: 6em;
     margin-left: 5px;
     cursor: pointer;
+}
 
+/* For animation of divs sec-protocol and schedule-date */
+.box{
+    transform: translateX(-100%);
+    opacity: 0;
 }
 
 /*--------------------------- plataforma virtual ----------------------------*/

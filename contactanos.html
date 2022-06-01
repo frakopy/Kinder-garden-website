@@ -130,13 +130,13 @@
                   </div>
                </div>
                <div class="btns-container">
-                  <div id="schedule-date" class="schedule-date">
+                  <div id="schedule-date" class="schedule-date box">
                      <a href="https://encanto.nececitas.com" target="_blank">
                         Agenda tu cita
                         <i class="fa-solid fa-calendar-days"></i>
                      </a>
                   </div>
-                  <div class="sec-protocol">
+                  <div id="sec-protocol" class="sec-protocol box">
                      <a id="pdf-link" class="manual" target='_blank' href="">
                         Descarga <br> Portafolio Educativo
                         <img class="manual pdf" src="/imgs/pdf.png" alt="pdf-img">
@@ -145,7 +145,7 @@
                </div>
             </div>
 
-            <footer>
+            <footer id="footer">
                <div class="logo-footer-cont">
                   <img class="logo-footer" src="imgs/logo_blanco.png" alt="logo">
                </div>
@@ -186,6 +186,10 @@
 
          </div>
       </div>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+      <script src="https://unpkg.com/scrollreveal"></script> 
+      <script src="script_menu.js"></script>
 
       <script>
          //Reading a PDF document 
@@ -237,12 +241,7 @@
                return false
             }
          })
-      </script>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-      <script src="https://unpkg.com/scrollreveal"></script> 
-      <script src="script_menu.js"></script>
-      <script>
          //Animating logo image
          gsap.fromTo('.logo-image', {scale:2.5}, {scale:1, duration:3})
 
@@ -250,24 +249,23 @@
          ScrollReveal().reveal('.contacto-img', { delay: 1300 })
 
          //Animating boxes whit rotation
-         const susukiPhrase = document.getElementById('susuki-ph')
+         const footer = document.getElementById('footer')
 
-         const observer2 = new IntersectionObserver(anim_susuki, {threshold: 1})
+         const observer = new IntersectionObserver(anim_box, {threshold: 0.01})
 
-         observer2.observe(susukiPhrase)
+         observer.observe(footer)
 
-         function anim_susuki ( entries, observer ) {
+         function anim_box ( entries, observer ) {
             entries.forEach(( entry ) => {
                if (entry.isIntersecting) {
-                     // console.log(`This element was intercepted ${entry}`)
+                     console.log(`This element was intercepted ${entry}`)
                      setTimeout(() => {
-                        gsap.to(susukiPhrase, {scale: 1, ease: "slow(0.7, 0.7, false)", duration: 2})
+                        gsap.to('.box', {x:'0%', rotation:360, duration:0.7, stagger:1, opacity:1})
                      }, 500)
-                  observer.unobserve(susukiPhrase) //stop to observe the element strong in order to execute the callback only once
+                  observer.unobserve(footer) //stop to observe the element strong in order to execute the callback only once
                }
             })
          }
-
       </script>
    </body>
 </html>
