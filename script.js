@@ -129,18 +129,53 @@ function anim_susuki ( entries, observer ) {
 
 
 //Animation title reasons 
+const h1 = document.getElementById('text-reasons').querySelector('h1')
 const h2 = document.getElementById('text-reasons').querySelector('h2')
+const h3 = document.getElementById('reason-desc').querySelector('h3')
+const h4 = document.getElementById('reason-desc').querySelector('h4')
 const observer3 = new IntersectionObserver(anim_text, {threshold: 1})
 
-observer3.observe(h2)
+observer3.observe(h4)
+
+const handleWriting = (string, element) => {
+    let i = 0
+
+    function writer(){
+        if(i < string.length){
+            element.textContent += string[i]  
+            i++
+            setTimeout(writer, 100)
+        }
+    }
+
+    writer()
+}
 
 function anim_text ( entries, observer ) {
 	entries.forEach(( entry ) => {
 		if (entry.isIntersecting) {
+            let text1 = '¿Buscando el mejor Jardín para tu hijo?'
+            handleWriting(text1, h1)
+            
+            let text2 = 'EnCanto Jardín Musical Ofrece:'
             setTimeout(() => {
-                gsap.to(h2, {y:'0%', duration:1.5, ease: Bounce.easeOut, opacity: 1})
-            }, 800)
-			observer.unobserve(h2) //stop to observe the element strong in order to execute the callback only once
+                handleWriting(text2, h2)
+            }, 5000)
+
+            let text3 = 'Cuidado, Amor, Arte &\n Formación Integral'
+            setTimeout(() => {
+                handleWriting(text3, h3)
+            }, 9000)
+
+            let text4 = 'Para niños y niñas de 1 año a 4 años'
+            setTimeout(() => {
+                handleWriting(text4, h4)
+            }, 13000)
+
+            // setTimeout(() => {
+            //     gsap.to(h2, {y:'0%', duration:1.5, ease: Bounce.easeOut, opacity: 1})
+            // }, 800)
+			observer.unobserve(h4) //stop to observe the element strong in order to execute the callback only once
 		}
 	})
 }
