@@ -302,7 +302,7 @@ a:link, a:visited, a:active{
 
 .schedule-date a{
     width: 95%;
-    height: 6vh;
+    height: 15vh;
     border-radius: 10px;
     background-color: #FF00B0;
     text-decoration: none;
@@ -334,7 +334,7 @@ a:link, a:visited, a:active{
 
 .sec-protocol a{
     width: 100%;
-    height: 100%;
+    height: 15vh;
     border-radius: 10px;
     background-color: #93D429;
     text-decoration: none;
@@ -349,7 +349,7 @@ a:link, a:visited, a:active{
 }
 
 .sec-protocol .pdf{
-    width: 3em;
+    width: 4.5em;
     height: 3em;
     cursor: pointer;
 }
@@ -646,6 +646,7 @@ footer {
 
     .sec-protocol a {
         width: 100%;
+        height: 100%;
         border-radius: 30px;
     }
 
