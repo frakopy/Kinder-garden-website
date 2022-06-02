@@ -311,10 +311,17 @@ a:link, a:visited, a:active{
     align-items:center;
     color: white;
     font-weight: bold;
-    font-size: calc(0.8em + 1vw)
+    font-size: calc(0.8em + 1vw);
 }
 
-.schedule-date a i{
+.schedule-date a .agenda{
+    width: 5em;
+    height: 3em;
+    cursor: pointer;
+}
+
+
+.schedule-date a {
     margin-left: 5px;
 }
 
@@ -348,7 +355,7 @@ a:link, a:visited, a:active{
     padding:10px;
 }
 
-.sec-protocol .pdf{
+.sec-protocol a .pdf{
     width: 4.5em;
     height: 3em;
     cursor: pointer;
