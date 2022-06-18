@@ -146,6 +146,13 @@
                </div>
             </div>
 
+            <div id="map" style="width: 90%; display: flex; justify-content: center; margin-top: 80px;">
+               <iframe
+               style="width: 80%; margin-bottom: 80px;" 
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.6721246556885!2d-76.19121129999999!3d4.0870012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e39c56351d0dbe5%3A0xbae4dea9f93ec8f8!2sEnCanto%20Jard%C3%ADn%20Musical!5e0!3m2!1ses-419!2spa!4v1655573615132!5m2!1ses-419!2spa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+               </iframe>
+            </div>
+
             <footer id="footer">
                <div class="logo-footer-cont">
                   <img class="logo-footer" src="imgs/logo_blanco.png" alt="logo">
@@ -250,11 +257,11 @@
          ScrollReveal().reveal('.contacto-img', { delay: 1300 })
 
          //Animating boxes whit rotation
-         const footer = document.getElementById('footer')
+         const map = document.getElementById('map')
 
          const observer = new IntersectionObserver(anim_box, {threshold: 0.01})
 
-         observer.observe(footer)
+         observer.observe(map)
 
          function anim_box ( entries, observer ) {
             entries.forEach(( entry ) => {
